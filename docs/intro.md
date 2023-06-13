@@ -2,46 +2,23 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Cleveland Software Design
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+## Product Overview
 
-Get started by **creating a new site**.
+Most products consist of the "do it yourself" solutions, through individual boards that you can put together to form an entire kit, or the fully assembled and ready to plug into your pinball machine variety. 
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Kits
 
-### What you'll need
+### Starter Kits
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+These are the simple control board with solenoid setup. They are the most flexible as you can specify the number of solenoids and even an assemble yourself option. While flexible, they don't come with much, but are a good way to go if you just want to get going with some solenoids and a control board that you can add toys to later.
 
-## Generate a new site
+### SSF Kits
 
-Generate a new Docusaurus site using the **classic template**.
+These are the option that use exciter speakers mounted inside your cabinet to add table event feedback. This is actually a great solution if you want to get started with a low cost and simple to install alternative to having a control board with DOF to configure, but in order to use in FX, you do still need to have popper installed, which means a bit of software configuration. It also only provides feedback to major table events in FX, so that means things link the ball rolling effect and most of the "little" effects that are really great in VPX do not exist for most FX tables. It is very easy to get working with VPX, and the experience in VPX is simply amazing, so it's an extremely popular choice if you are already enjoying VPX and want to add some more realism to it. Some will say it's a better investment than solenoids for VPX and I agree so as long as you get the higher quality speakers (which are included in all my kits).
 
-The classic template will automatically be added to your project after you run the command:
+### Builders Kits
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+These are the (almost) all inclusive kits that give you the ability to get a fairly comprehensive pinball machine in one simple to install package. There is still a lot of parts to go through, mount and install, but the end result is a pinball machine with all the best toys and lights. If you want something that is even better than most pre-built machines come with at a fraction of the cost without the time investment of doing it all yourself, then these are the way to go.

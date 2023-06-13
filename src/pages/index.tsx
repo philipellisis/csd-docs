@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -31,10 +32,10 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="All the docs for Cleveland Software Design Products">
       <HomepageHeader />
       <main>
-        
+        <img src={useBaseUrl('/img/all-products.png')}></img>
       </main>
     </Layout>
   );

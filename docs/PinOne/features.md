@@ -7,6 +7,7 @@ sidebar_position: 1
 ## Core Hardware Features
 
 - Fully DOF and DOFLinx compatible board
+- 100% compatible in Steam, which means no controller emulation needed to make it work, including the plunger!
 - 31 outputs built into the board (20 PWM and 11 on/off outputs)
 - 16 5v onboard PWM outputs are capable of providing low current outputs for LEDs and have current limiting resistors built in. No need for an additional power supply to run LED buttons as they are all powered by the USB power
 - Using expansion boards can provide an additional 32 outputs for a total of 63 outputs

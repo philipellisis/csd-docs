@@ -22,3 +22,13 @@ These are the option that use exciter speakers mounted inside your cabinet to ad
 ### Builders Kits
 
 These are the (almost) all inclusive kits that give you the ability to get a fairly comprehensive pinball machine in one simple to install package. There is still a lot of parts to go through, mount and install, but the end result is a pinball machine with all the best toys and lights. If you want something that is even better than most pre-built machines come with at a fraction of the cost without the time investment of doing it all yourself, then these are the way to go.
+
+## Boards
+
+### PinOne Boards
+
+These are the latest offering of the boards that connect your PC to your toys, and are designed to replace the Pinscape boards due to availability. They translate table events emitted from DOF and DOFLinx into outputs that allow your lights, solenoids, shakers, and other toys to respond properly in your cabinet. The boards also allow for the addition of a plunger, adding nudge to your cabinet and adding button inputs to your cabinet. They are less configurable than the Pinscape boards, but also offer a lot of nice features that the Pinscape boards are not able to offer that I always wish they did.
+
+### KL25Z Pinscape Boards
+
+These boards are the "gold standard" of the virtual pinball boards, have been around for many years, and offer a lot of configuration options for running your virtual pinball machine. I have been supplying solutions using these boards for many years, but due to supply issues have started to switch over to the PinOne boards.

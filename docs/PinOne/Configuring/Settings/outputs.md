@@ -16,6 +16,12 @@ This is the value that the output will go to after the "Set Value After" time li
 
 ## Toy Category
 
-Set this to "noisy" or "RGB" depending on the nature of the device. If set to "noisy" then when the night mode is enabled with button 22, then the devices set to noisy will stop responding to events, thus preventing the cabinet from being noisy at night. If set to "RGB", then that output will be set for the special "light show" that is available if no input our output is received by the device for a set period of time. This allows you to enjoy special effects with your lighted buttons and other lights in your setup even if you don't have DOF functioning.
+Set this depending on the nature of the device. Below is a description of the different settings and how it affects the output:
+
+ - **Normal** A normal output with no special considerations.
+ - **Noisy** when the night mode is enabled, then the devices set to noisy will stop responding to events, thus preventing the cabinet from being noisy at night.
+ - **Light Show Medium** That output will be set for the special "light show" that is available if no input our output is received by the device for a set period of time. This allows you to enjoy special effects with your lighted buttons and other lights in your setup even if you don't have DOF functioning. The "Medium" setting specifies that the lights will be at 50% intensity until a button press, which will then cause them to light up to max intensity until the button is released.
+ - **Light Show High** Same as the above, only in this mode the lights will always be at 100% intensity, so pressing a button won't affect how bright it is.
+ - **Shared** These outputs are also affected by night mode, but they will also share events. This is typically used with solenoids so if you have an event telling a solenoid to trigger, but that output is already enabled, it wil look to other shared outputs to trigger instead.
 
 ![image](./img/settingsOutputs.png)

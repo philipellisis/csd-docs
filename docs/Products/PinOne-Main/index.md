@@ -16,6 +16,7 @@ The PinOne Main board is a board that attaches to the PinOne and exposes all the
 - Header pins to connect the button board, which supports 14 buttons (5 RGB and 9 normal buttons) along with DOF controlled lighted outputs for 5 RGB and 4 single color buttons -- all powered from the USB port, so no external power supply needed to operate
 - 3 additional signal level outputs that can be used to drive other equipment -- the knocker board, as well as other perepherials that only need a signal level output to trigger.
 - Header pins for connecting the expansion boards to power the light bar or add another bank of 16 high power outputs to your cabinet
+- Header pins to easily connect the service board or add additional buttons to the PinOne
 - All the normal PinOne features like nudge/tilt, and many software enabled features
 
 ## Hooking it all up

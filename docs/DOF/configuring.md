@@ -19,6 +19,18 @@ When creating a config file for your setup, its simply a matter of selecting the
 ### PinOne Config File
 ![image](./img/DOF-config-4.png)
 
+### PinOne Mini Config File
+
+For the PinOne Mini, if you only have 2 solenoids connected to it, then you will have a slightly different configuration file. The main difference is you want to share toys to ensure that you have solenoid feedback for the flippers and slings and pop bumpers. To do this, simply navigate to the "Combine Toys" section in the config tool and enter two new combos like the following:
+
+![image](./img/DOF-config-5.png)
+
+If you would prefer DOF control the flippers, then you can also set the flippers in the toy combo and remove the button binding in the PinOne config tool.
+
+Then modify the config so that all the combo outputs go directly to the 2 outputs with solenoids attached to them.
+
+![image](./img/DOF-config-6.png)
+
 ### Pinscape Config File
 ![image](./img/DOF-config-2.png)
 

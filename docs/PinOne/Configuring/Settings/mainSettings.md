@@ -18,6 +18,12 @@ This allows you to tie up to 4 buttons to an output on the PinOne board. This me
 
 ## Buttons
 
+### Night Mode
+
 This section allows you to set which button will trigger night mode as well as what type of button you are using. If you are using a toggle button, then night mode will be activated while the button is "on" and disabled when the button is "off" if using a push button, when you push the button once, night mode will be activated, and pushing the button again will disable night mode
+
+### Shift Button
+
+This dropdown selects which button is assigned as the "shift button" when pressing this button, buttons 5-8 will actually trigger 25-28, allowing those 4 buttons to have dual actions.
 
 ![image](./img/settingsMain.png)

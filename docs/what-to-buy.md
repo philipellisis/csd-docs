@@ -70,3 +70,18 @@ If you want to add a knocker to your setup, I offer a nice solution for triggeri
 If you want an easy way to access internal cabinet functions like volume up/down, and other service functions, then the service board plugs right into both the PinOne main and the PinOne mini boards
 
 - [Service Board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/expansion-breakout-board-zx5y6)
+
+
+### To make a (duplicate) PinOne Mini Machine
+
+I've had customers ask me what parts I use inside the PinOne Mini machine, and you can build your own by getting the following:
+
+- [Plunger](https://www.clevelandsoftwaredesign.com/pinball-parts/p/virtual-pinball-plunger-attachment) (Get the "plug and play kit" and "williams plunger included" options)
+- [RGB Buttons](https://www.clevelandsoftwaredesign.com/pinball-parts/p/rgb-leaf-button) (get 5 of these)
+- [LED Buttons](https://www.clevelandsoftwaredesign.com/pinball-parts/p/rgb-leaf-button-3hwee) (get 4 of these)
+
+Optional, if you want the solenoid option:
+- [Power supply](https://www.clevelandsoftwaredesign.com/pinball-parts/p/12v-10a-power-supply-with-cord)
+- [Solenoids](https://www.clevelandsoftwaredesign.com/pinball-parts/p/high-quality-solenoid) (2 of these)
+
+The only difference with this setup is the power supply I provide with the PinOne Mini Machine is slightly different, but you would need to mount the plug onto your cabinet to use the one I sell with the PinOne Mini Machine, which is not really simple to do. If this is still something you would like to do, then just ask for the PinOne power supply option when you purchase and I will send it to you.

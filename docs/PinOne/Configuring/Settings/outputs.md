@@ -25,3 +25,13 @@ Set this depending on the nature of the device. Below is a description of the di
  - **Shared** These outputs are also affected by night mode, but they will also share events. This is typically used with solenoids so if you have an event telling a solenoid to trigger, but that output is already enabled, it wil look to other shared outputs to trigger instead.
 
 ![image](./img/settingsOutputs.png)
+
+## How to set button colors
+
+If you want your buttons to always light up to a certain color, you can do that by changing a couple of settings:
+
+1. Set the Max Output Value to the number you want
+2. Set the "light show" to "Light Show High" this will ensure the button LED is always at maximum intensity. 
+
+Note that the secondary light show will still apply when the buttons are in "attract mode" but as soon as you press a button, the colors will change to the setting defined. An example of this setting for the RGB Flippers is below. In this case, the buttons will always be a light purple color.
+

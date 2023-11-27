@@ -35,3 +35,4 @@ If you want your buttons to always light up to a certain color, you can do that 
 
 Note that the secondary light show will still apply when the buttons are in "attract mode" but as soon as you press a button, the colors will change to the setting defined. An example of this setting for the RGB Flippers is below. In this case, the buttons will always be a light purple color.
 
+![image](./img/settingsOutputs2.png)

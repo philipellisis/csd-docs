@@ -14,5 +14,6 @@ Why would you combine names of the same outputs? This can be helpful for high de
 
 <CabinetXml></CabinetXml>
 
+## LED Arrangements (Thanks to SwissLizard)
 
-
+![image](./img/LEDDirections.png)

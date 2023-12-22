@@ -8,7 +8,7 @@ export default function CabinetXml() {
     const [dtrEnable, setDtrEnable] = useState(false);
     const [toys, setToys] = useState([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'BottomUpRightLeft'},
                                       { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'BottomUpLeftRight'},
-                                      { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft'}
+                                      { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft'}
                                     ]);
 
     const handleNumToysChange = (event) => {

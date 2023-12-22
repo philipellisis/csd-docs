@@ -9,7 +9,9 @@ In order to configure DOF, you need to setup a configuration file. The easiest w
 ## Selecting your device
 Once you have an account setup, navigate to ```My Account``` and select the number of devices for your setup.
  - For the PinOne or KL25Z Pinscape device, select ```pinscape```
- - for the 8 output ```sainsmart``` board that runs the plug and play shaker motor or some starter kits, select ```sainsmart```
+ - For the 8 output ```sainsmart``` board that runs the plug and play shaker motor or some starter kits, select ```sainsmart```
+ - For the Addressable LED board, select ```WS2811```
+ 
 ![image](./img/DOF-config-1.png)
 
 ## Creating a config file
@@ -30,6 +32,12 @@ If you would prefer DOF control the flippers, then you can also set the flippers
 Then modify the config so that all the combo outputs go directly to the 2 outputs with solenoids attached to them.
 
 ![image](./img/DOF-config-6.png)
+
+### Addressable LED Config File
+
+For addressable LEDs, just select each output based on the type of LED strip you have configured in the Cabinet.xml file. In the case below, I have my cabinet setup in the most used configuration, a right LED strip, a left LED strip and then a back LED matrix
+
+![image](./img/DOF-config-7.png)
 
 ### Pinscape Config File
 ![image](./img/DOF-config-2.png)

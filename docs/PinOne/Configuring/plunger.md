@@ -16,4 +16,16 @@ The "Push button on min" and "Push button on max" checkboxes allow you to push t
 
 ## Average readings
 
-You should set this number to a fairly high value to ensure enough readings are being averaged when reading the plunger position before sending the value to the encoder. Because the averaging happens extremely fast, setting this to a higher value will not affect performance of the board in any noticeable way, so set it to a value that is high enough to prevent any jitter in the plunger.
+You should set this number to a high enough value to ensure enough readings are being averaged when reading the plunger position before sending the value to the encoder. Usually around 10-20 average readings is enough. Because the averaging happens extremely fast, setting this to a higher value will not affect performance of the board in any noticeable way, so set it to a value that is high enough to prevent any jitter in the plunger.
+
+## Disable Plunger When Not Moving
+
+This setting will ignore small plunger movements when it isn't actively moving and in its resting position. This can improve latency by a small amount when actively playing a game and using the flippers, but in systems where there is excessive noise in the USB ground, it could cause the plunger to unexpectedly move during gameplay which can be distracting and disable the accelerometer if the setting is enabled. If you experience this, then it is recommended to turn this off and instead rely on the plunger average readings to stabilize the plunger.
+
+## Plunger Quick Release
+
+This setting will cause the plunger to immediately move from the held position to minimum position when released. This can be helpful in some VPX games where the plunger movement can cause some games to have unreliable releases. When using this setting, it is recommended to keep the average readings as low as possible, not more than 20 averages.
+
+## Disable Accelerometer on Movement
+
+This setting will disable the accelerometer when the plunger is actively moving. This can be helpful if releasing the plunger causes the ball to change movement due to the accelerometer being triggered.

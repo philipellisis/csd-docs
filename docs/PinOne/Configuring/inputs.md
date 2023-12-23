@@ -13,3 +13,7 @@ Besides the obvious of being able to see button presses made in the PinOne board
 ## Send Keyboard Presses
 
 Next to each button is the option to set a keyboard keypress for each button input. When set, this will send a keyboard keystroke as well as the button press with each press of a button. This can be helpful for games that don't support a game controller or if you want to use a standard set of keys with the PinOne.
+
+## Debounce
+
+This can be set for buttons in case you don't want them to be as sensitive to fast button presses. This is not recommended for the flipper buttons but can be helpful for some of the menu buttons to prevent accidentally double tapping them.

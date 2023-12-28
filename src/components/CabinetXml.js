@@ -58,7 +58,7 @@ export default function CabinetXml() {
                 wemosController.ele("NumberOfLedsStrip" + (index + 1)).txt(toy.numberOfLeds.toString()).up();
             }
         });
-        wemosController.ele('ComPort').txt('COM' + comPort.toString()).up();
+        wemosController.ele('ComPortName').txt('COM' + comPort.toString()).up();
         wemosController.ele('ComPortTimeOutMs').txt('300').up();
         wemosController.ele('ComPortBaudRate').txt('2000000').up();
         wemosController.ele('ComPortOpenWaitMs').txt('300').up();

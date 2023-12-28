@@ -93,7 +93,7 @@ export default function CabinetXml() {
                 ledStrip.ele('FirstLedNumber').txt(currentLedCount).up();
                 ledStrip.ele('FadingCurveName').txt('SwissLizardsLedCurve').up();
                 ledStrip.ele('Brightness').txt('100').up();
-                ledStrip.ele('OutputControllerName').txt('Test').up();
+                ledStrip.ele('OutputControllerName').txt('LED Strips').up();
             }
             currentLedCount += parseInt(toy.numberOfLeds || '0', 10);
 

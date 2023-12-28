@@ -18,7 +18,7 @@ export default function CabinetXml() {
     };
 
     const handleComPortChange = (event) => {
-        const newComPort = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 6);
+        const newComPort = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 30);
         setComPort(newComPort);
         
     }

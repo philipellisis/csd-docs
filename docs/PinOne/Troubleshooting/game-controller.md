@@ -16,3 +16,5 @@ If you are having a problem where the PinOne is not being recognized properly in
 ![RegEdit Keys](./img/game-controller2.png)
 
 4. Plug the PinOne back in and your game controllers should now show up properly.
+
+5. If the game controllers are still not showing up, there could be other entries with the key that need removing. You can try searching the registry for any entries matching `VID_0E8F&PID_9206` and delete all that are found.

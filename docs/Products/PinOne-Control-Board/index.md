@@ -12,6 +12,10 @@ You can read more about the features [Here](../../PinOne/features)
 
 The PinOne can be configured using the configuration tool that can be downloaded [Here](../../PinOne/Configuring)
 
+## Compatible LEDs
+
+Of course, everything sold on my store is compatible with the PinOne. IF you are looking for 555 style bulbs that can work with the PinOne, then most 6.3v LED bulbs will work with my board. Here is one version that I have tested to work well: https://www.amazon.com/gp/product/B07CHD47CB/
+
 ## Hooking it up
 
 Below is a diagram showing the pinouts as wel as a simple example of connecting toys to it

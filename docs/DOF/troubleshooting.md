@@ -12,7 +12,7 @@ Check to make sure that visual pinball has a link to DOF. Sometimes when DOF is 
 ![image](./img/DOF-shortcut.png)
 
 ## Testing DOF manually
-You can also manually test that your dof settings are correct by testing the output by opening the ```C:\DirectOutput\DirectOutputConfigTester.exe``` to test that DOF is working properly. Just select a ROM and leave the other two fields empty, then click OK and start testing the solenoids/toys/outputs there. If they work there, then you can be pretty sure DOF is setup correctly and it's just the link between DOF and VPX.
+You can also manually test that your dof settings are correct by testing the output by opening the ```C:\DirectOutput\DirectOutputConfigTester.exe``` to test that DOF is working properly. Just select a ROM and leave the other two fields empty unless you have a cabinet file (normally only if you have addressable LEDs) in which case you will also want to select the global config file `GlobalConfig_B2SServer.xml`, then click OK and start testing the solenoids/toys/outputs there. If they work there, then you can be pretty sure DOF is setup correctly and it's just the link between DOF and VPX.
 ![image](./img/DOF-test.png)
 ![image](./img/DOF-test-2.png)
 

@@ -5,13 +5,10 @@ sidebar_position: 1
 # Installing DOF
 
 You can install DOF using the installers found here. Make sure you select the correct version based on the install of VPX on your PC (64 or 32 bit)
-- [32bit DOF Installer](./files/DOFSetup.msi) 
-- [64bit DOF Installer](./files/DOFSetup64.msi)
+- [32bit DOF Installer](./files/DOFSetupBeta.msi) 
+- [64bit DOF Installer](./files/DOFSetup64Beta.msi)
 
-The beta files allow for concurrent connections to the PinOne. These are not fully tested but if you are having issues with DOFLinx and DOF running at the same time, you can try these Beta DOF installers to resolve the problem.
-- [32bit BETA DOF Installer](./files/DOFSetupBeta.msi) 
-- [64bit BETA DOF Installer](./files/DOFSetup64Beta.msi)
-
+## Installing both 32 bit and 64 bit DOF
 When installing the 64 bit version, make sure to place it in a different directory from the 32 bit version if you intend on running both at the same time. You will also need to manually update the plugins shortcut that is normally created for you when installing the 64 bit version if you want to be able to run both. The best process to follow for a successful install of both a 32 bit and 64 bit install is the following:
 
 1. Install the 64 bit version of DOF.

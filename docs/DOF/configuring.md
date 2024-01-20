@@ -35,7 +35,7 @@ Then modify the config so that all the combo outputs go directly to the 2 output
 
 ### Addressable LED Config File
 
-For addressable LEDs, just select each output based on the type of LED strip you have configured in the Cabinet.xml file. In the case below, I have my cabinet setup in the most used configuration, a right LED strip, a left LED strip and then a back LED matrix
+For addressable LEDs, just select each output based on the type of LED strip you have configured in the Cabinet.xml file. In the case below, I have my cabinet setup in the most used configuration, a right LED strip, a left LED strip and then a back LED matrix. If you have more, then just add additional outputs. You can use the [cabinet generator](../AddressableLED/cabinetGenerator) to generate the cabinet file that should match what you have set in DOF for outputs.
 
 ![image](./img/DOF-config-7.png)
 

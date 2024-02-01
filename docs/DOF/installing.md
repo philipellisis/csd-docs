@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Installing DOF
 
+In order to get the LATEST version of DOF, I highly recommend to install from here and not from anywhere else you might find installers on the internet. These are the latest builds of DOF that include important security updates as well as bug fixes and device compatibility that are not available from any other sources that I am aware of at this time.
+
 You can install DOF using the installers found here. Make sure you select the correct version based on the install of VPX on your PC (64 or 32 bit)
 - [32bit DOF Installer](./files/DOFSetupBeta.msi) 
 - [64bit DOF Installer](./files/DOFSetup64Beta.msi)

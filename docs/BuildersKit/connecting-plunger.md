@@ -8,10 +8,10 @@ You can connect the plunger to either the button board or the main board. It doe
 
 ### Connecting to the button board
 
-![image](./img/BuildersKit5.jpg)
+![image](./img/buildersKit5.jpg)
 
 
 ### Connecting to the Main Board
 
-![image](./img/BuildersKit6.jpg)
+![image](./img/buildersKit6.jpg)
 

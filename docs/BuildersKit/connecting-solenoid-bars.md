@@ -11,9 +11,10 @@ For the Small kit, the kit comes with a 5 wire cable with a 5 pin terminal on on
 Connect the solenoid bars to the PinOne Main board as shown in the pictures below:
 
 ## Connecting the 2 position solenoid bars:
-![image](./img/BuildersKit2.jpg)
+
+![image](./img/buildersKit2.jpg)
 
 ## Connecting the 3 position solenoid bars:
 
 
-![image](./img/BuildersKit3.jpg)
+![image](./img/buildersKit3.jpg)

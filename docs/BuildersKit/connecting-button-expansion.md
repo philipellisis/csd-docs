@@ -10,8 +10,8 @@ The service board is tied to button inputs 15-22
 
 ### Connecting the button expansion board
 
-![image](./img/BuildersKit10.jpg)
+![image](./img/buildersKit10.jpg)
 
 ### Connecting the service board
 
-![image](./img/BuildersKit11.jpg)
+![image](./img/buildersKit11.jpg)

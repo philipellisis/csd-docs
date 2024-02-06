@@ -21,7 +21,7 @@ The [SSF Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/high-powe
 
 ### Builders Kits
 
-The [Builders Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/virtual-pinball-builders-kit) are the (almost) all inclusive kits that give you the ability to get a fairly comprehensive pinball machine in one simple to install package. There is still a lot of parts to go through, mount and install, but the end result is a pinball machine with all the best toys and lights. If you want something that is even better than most pre-built machines come with at a fraction of the cost without the time investment of doing it all yourself, then these are the way to go.
+The [Builders Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/virtual-pinball-builders-kit) are the (almost) all inclusive kits that give you the ability to get a fairly comprehensive pinball machine in one simple to install package. There are still a lot of parts to go through, mount and install, but the end result is a pinball machine with all the best toys and lights. If you want something that is even better than most pre-built machines come with at a fraction of the cost without the time investment of doing it all yourself, then these are the way to go.
 
 ### Piecing it together (DIY Option)
 

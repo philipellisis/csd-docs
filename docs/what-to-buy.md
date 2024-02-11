@@ -43,6 +43,14 @@ If you already have the PinOne Main board, then the shaker motor will connect di
 - [Shaker Motor and Housing](https://www.clevelandsoftwaredesign.com/pinball-parts/p/ultimate-pinball-shaker-motor)
 - [Power supply](https://www.clevelandsoftwaredesign.com/pinball-parts/p/12v-10a-power-supply-with-cord)
 
+If you already have a SSF bass shaker, you will still get a lot of benefit from the shaker motor. Here are the differences of each of them:
+
+The real pinball shaker motor is triggered by DOF enabled pinball events, so it will only go off for certain events happening on the table and is actually going to shake the cabinet in a significant way. It is used infrequently but is enabled for most VPX tables and adds a lot to the experience.
+
+The exciters makes audible noise -- it is essentially a speaker but it uses your cabinet to make the sound so there is resonance that you can feel. They are typically quite small though so the amount of feeling is usually not much.
+
+bass shaker is a large exciter that makes very little actual sound but will move the cabinet from audio signals. Since the exciters and the bass shaker are receiving the same audio signal, it adds a lot of punch to the feel from the exciters that are mounted on the side of the cabinet. These emulate the feeling of pop bumpers and other large solenoids going off in the cabinet that you aren't able to emulate through the smaller exciters very well.
+
 ### To add a light bar
 
 For the light bar, you will need an expansion board. The PinOne only supports the 16 output version for the light bar. You can also optionally add the strobes to the light bar as they plug right into the back of it

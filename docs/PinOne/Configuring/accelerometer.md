@@ -15,3 +15,10 @@ If the board is mounted on its side (like it is on the PinOne Mini Machine) then
 4. Click the "Record Dead Zone" button to record the values that will be ignored. The Dead Zone value is highlighted with a gray square on the accelerometer graph. This can be helpful if toys like your shaker or solenoids are activating the accelerometer. I added the ability to turn on/off your outputs from the screen so you can see how your various outputs affects the accelerometer and also to assist in automatically setting the dead zone. I've found that I prefer to set this value and keep the accelerometer more sensitive so that I don't have to aggressively shake my table to get the ball to move. It's a little less realistic than a real pinball machine, but much easier on the table. Click the "Record Dead Zone" button when you are done.
 5. Use the "Record Tilt Value" button in the same way you set the Dead Zone, except you will want to move the table to a point where you would consider a tilt event occurring. This value is shown with the yellow square on the accelerometer graph. When tilt is activated, it will send an output to the button selected in the "tilt button" dropdown.
 6. Use the "Record Max Value" button to set the absolute maximums you would expect to receive on the accelerometer. If you want to make the accelerometer less sensitive to movement, this is actually the best item to adjust. You can set this to a much higher number manually and it will restrict the overall sensitivity to accelerometer events sent.
+
+## Setting Tilt in VPX
+
+In VPX, you need to configure the tilt to use a real tilt bob (even though the PinOne is simulated, it will work just as good as a real tilt bob) in order to do this, you need to take the following steps:
+
+1. Navigate to your visual pinball scripts folder. Typically `C:\Visual Pinball\Scripts`
+2. Find the file named `NudgePlugIn_mjrAccelAndTilt.vbs` and rename it to `NudgePlugIn.vbs` This will ensure that the tilt from the PinOne board does not cause a real tilt event on the table and also counts the tilt event properly towards a mechanical tilt. 

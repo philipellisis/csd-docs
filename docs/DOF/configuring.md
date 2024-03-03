@@ -18,10 +18,10 @@ Once you have an account setup, navigate to ```My Account``` and select the numb
 
 When creating a config file for your setup, its simply a matter of selecting the outputs for each device in your cabinet. Output #1 in the config tool will match output #1 when you are manually testing your board, so it's not too difficult to create. I recommend simply turning on your machine, testing each output, then setting the output in the dropdown. Below is an example of what your configuration will look like after it's all complete:
 
-### PinOne Config File
+### PinOne (builders kit) Config File
 ![image](./img/DOF-config-4.png)
 
-### PinOne Mini Config File
+### PinOne Mini (two solenoid) Config File
 
 For the PinOne Mini, if you only have 2 solenoids connected to it, then you will have a slightly different configuration file. The main difference is you want to share toys to ensure that you have solenoid feedback for the flippers and slings and pop bumpers. To do this, simply navigate to the "Combine Toys" section in the config tool and enter two new combos like the following:
 

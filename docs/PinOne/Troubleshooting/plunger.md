@@ -26,4 +26,16 @@ The plunger actually disables the accelerometer when the plunger is not at the r
 
 ![USB Game Controllers](./img/popper6.png)
 
-The Z axis corrisponds to the plunger, so if you see it moving up and down with the plunger pull and release as well as sitting in the center when resting then you can be sure that the problem lies in your configuration in VisualPinball or the other applications and not in the PinOne Board.
+The Z axis corresponds to the plunger, so if you see it moving up and down with the plunger pull and release as well as sitting in the center when resting then you can be sure that the problem lies in your configuration in VisualPinball or the other applications and not in the PinOne Board.
+
+## Soft plunger releases
+
+If the plunger is not hitting the ball consistently or not hitting the ball as hard as you would expect, then try the following:
+
+1. First thing to check is that you have a good calibration. Ensure that the "plunger min" is much lower than the "plunger mid" (typically about 100 units lower). IF this is not the case, then redo the calibration and make sure to push the plunger as far forward as you can to ensure a good "min" reading.
+
+2. Ensure that you are not getting excessive jitter from your plunger. The plunger should not be jumping around more than 10 units up or down from the "plunger mid" value while in the test screen. If it is, then check that you have a good USB connection to the PinOne board. Sometimes a bad ground can cause a lot of jitter which can affect how VPX sees the plunger as it is being released. Note that setting the average DOES NOT affect what you see in the plunger test screen, those are raw numbers from the plunger before averaging, so if you have a lot of jitter, increasing the number of averages can help.
+
+3. Ensure that the connection from the plunger "L" bracket to the potentiometer slide is not too stiff. Having a loose connection will help to ensure that a smooth slide occurs when releasing. Too much friction can cause the potentiometer to give erratic readings during the release.
+
+4. If you still have unreliable releases after checking these items, you can greatly improve the releases by setting the "Plunger Quick Release" checkbox to true. You can read more about this feature in the main plunger configuration docs

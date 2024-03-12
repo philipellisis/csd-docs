@@ -19,6 +19,24 @@ The PinOne Main board is a board that attaches to the PinOne and exposes all the
 - Header pins to easily connect the service board or add additional buttons to the PinOne
 - All the normal PinOne features like nudge/tilt, and many software enabled features
 
+## Difference from PinOne Mini board
+
+A question I get a lot is how can I tell if I should get the PinOne Main board or the PinOne Mini board? They both use the same PinOne control board, so the software is the same, but there are some hardware differences to be aware of. Here are the differences of both of them
+
+| Feature                       | PinOne Main                           | PinOne Mini             |
+| ----------------------------- | ----------------------------------    | ----------------------- |
+| **Number of High Power Outputs**     | **12** - 11 mosfet, 1 motor controller    | **2** - With Life extenders |
+| **Number of Life Extenders** | **0** - designed to be used with life extenders if adding solenoids | **2** - designed to have 2 solenoids plugged directly into board |
+| **Number of Button Inputs**          | **14** - screw terminal type                | **9** - JST-XH connectors     |
+| **Number of Low Power Outputs**      | **3** - Normally for knocker and 2 others | **16** - enough for 5 RGB buttons and 4 single color buttons |
+| **Input Voltage** | **5V-36V** | **5V-24V** |
+| **Plunger input** | **Yes** - dedicated 3 wire input | **Yes** - dedicated 3 wire input |
+| **Supports Button Board** | **Yes** - Required for lighted button outputs | **No** - Buttons connect directly to board |
+| **Supports PinOne Mini Expansion Board** | **No** - All high power outputs are on the PinOne Main Board | **Yes** - Used to upgrade the Mini to a PinOne Main like board |
+| **Supports Service Board** | **Yes** | **Yes** |
+| **Maximum Supported Outputs** | **63** | **63** |
+| **Maximum Supported Inputs** | **24** | **24** |
+
 ## Hooking it all up
 
 ### Connecting to the PC

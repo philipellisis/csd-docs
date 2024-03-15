@@ -51,3 +51,10 @@ Note that this is a direct connection to the power supply, so if you are running
 Below is a wiring diagram showing how to connect all the options listed above
 
 ![image](./img/flipper-boards-v2-2.jpg)
+
+
+## Bypassing to run directly off the PinOne board
+
+In case you have upgraded to the PinOne board and want to use the flipper boards just for the life extender functionality, you can bypass them by connecting a jumper to the button input and connecting one of the PinOne Main outputs directly to the power input on the flipper board. The picture below demonstrates how this can be done.
+
+![image](./img/flipper-boards-v2-4.jpg)

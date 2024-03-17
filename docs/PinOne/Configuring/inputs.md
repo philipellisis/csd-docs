@@ -6,13 +6,13 @@ sidebar_position: 4
 
 ![image](./img/buttons.png)
 
-## Send button presses
+## Steam calibration text
 
-Besides the obvious of being able to see button presses made in the PinOne board when in this screen, it also provides a way to send button inputs out to the computer that are not generally easy to send like the accelerometer left, right, up, down, and the plunger up, down as well as the plunger button press if configured. This allows you to setup the PinOne board in steam and properly assign inputs to each of the different controller functions.
+Besides the obvious of being able to see button presses made in the PinOne board when in this screen, it also provides a way to generate a steam calibration file that can be used to directly map the buttons of the PinOne to a Steam controller. Just set the buttons the way you want them to work in steam and paste the text shown into steam during the calibration phase.
 
 ## Send Keyboard Presses
 
-Next to each button is the option to set a keyboard keypress for each button input. When set, this will send a keyboard keystroke as well as the button press with each press of a button. This can be helpful for games that don't support a game controller or if you want to use a standard set of keys with the PinOne.
+Next to each button is the option to set a keyboard keypress for each button input. When set, this will send a keyboard keystroke as well as the button press with each press of a button. This can be helpful for games that don't support a game controller or if you want to use a standard set of keys with the PinOne. To use this feature, click the button next to the button you want to activate, and then use a keyboard to record the keystroke you want to simulate on the PinOne.
 
 ## Debounce
 

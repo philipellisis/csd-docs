@@ -24,7 +24,7 @@ This setting will ignore small plunger movements when it isn't actively moving a
 
 ## Plunger Quick Release
 
-This setting will cause the plunger to immediately move from the held position to minimum position when released. This can be helpful in some VPX games where the plunger movement can cause some games to have unreliable releases. When using this setting, it is recommended to keep the average readings as low as possible, not more than 20 averages.
+This setting will cause the plunger to immediately move from the held position to minimum position when released. This can be helpful in some VPX games where the plunger movement can cause some games to have unreliable releases. When setting this, make sure you have the "Launch button" set in both VPX and in the config tool as this feature actually utilizes the VPX launch button to send the ball at the exact moment you release the plunger.
 
 ## Disable Accelerometer on Movement
 

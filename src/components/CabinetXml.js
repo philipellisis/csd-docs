@@ -6,11 +6,65 @@ export default function CabinetXml() {
     const [numToys, setNumToys] = useState(3);
     const [comPort, setComPort] = useState(1);
     const [dtrEnable, setDtrEnable] = useState(false);
-    const [toys, setToys] = useState([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp'},
-                                      { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp'},
-                                      { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft'}
-                                    ]);
+    const [toys, setToys] = useState([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+    { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+    ]);
 
+
+    const handleSingleMatrixToyChange = () => {
+        setNumToys(3);
+        setToys([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+        { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+        { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+        ])
+    }
+    const handle4MatrixToyChange = () => {
+        setNumToys(6);
+        setToys(
+                [
+                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                ]
+            )
+    }
+    const handle6MatrixToyChange = () => {
+        setNumToys(8);
+        setToys(
+                [
+                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                ]
+            )
+    }
+
+    const handle8MatrixToyChange = () => {
+        setNumToys(10);
+        setToys(
+                [
+                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                ]
+            )
+    }
     const handleNumToysChange = (event) => {
         const newNumToys = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 6);
         setNumToys(newNumToys);
@@ -20,7 +74,7 @@ export default function CabinetXml() {
     const handleComPortChange = (event) => {
         const newComPort = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 30);
         setComPort(newComPort);
-        
+
     }
 
     const handleDtrEnableChange = (event) => {
@@ -42,11 +96,20 @@ export default function CabinetXml() {
         setToys(updatedToys);
     };
 
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(generateXML());
+            alert('Code copied to clipboard!');
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    };
+
     const generateXML = () => {
         const doc = create({ version: '1.0' })
             .ele('Cabinet', { 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance', 'xmlns:xsd': 'http://www.w3.org/2001/XMLSchema' })
             .ele('Name').txt('AddressableLEDSetup').up()
-    
+
         // WemosD1MPStripController and its contents
         const outputControllers = doc.ele('OutputControllers');
         const wemosController = outputControllers.ele('WemosD1MPStripController');
@@ -117,10 +180,10 @@ export default function CabinetXml() {
                 toyIndex += 1;
             }
         });
-    
+
         toysElement.up(); // Close Toys
-        
-    
+
+
         return doc.end({ prettyPrint: true });
     };
 
@@ -133,11 +196,24 @@ export default function CabinetXml() {
     ];
 
     return (
+        <div>
         <div className={styles.container}>
+        Press buttons below to set pre-configured cabinet files (All configurations include L/R side strip LEDs)
+        <div>
+            < button className={styles.Button} onClick={handleSingleMatrixToyChange}>Single Matrix Config</button>
+            < button className={styles.Button} onClick={handle4MatrixToyChange}>4 Matrix Config</button>
+            < button className={styles.Button} onClick={handle6MatrixToyChange}>6 Matrix Config</button>
+            < button className={styles.Button} onClick={handle8MatrixToyChange}>8 Matrix Config</button>
+        </div>
+
+    </div>
+        <div className={styles.container}>
+
+
             <div className={styles.label}>
                 <label>
-                    Number of LED Outputs (1-6):
-                    <input className={styles.input} type="number" value={numToys} onChange={handleNumToysChange} min="1" max="6" />
+                    Number of LED Outputs (1-10):
+                    <input className={styles.input} type="number" value={numToys} onChange={handleNumToysChange} min="1" max="10" />
                 </label>
 
             </div>
@@ -146,7 +222,7 @@ export default function CabinetXml() {
                     COM Port Number (Find in device manager):
                     <input className={styles.input} type="number" value={comPort} onChange={handleComPortChange} min="1" max="30" />
                 </label>
-                
+
             </div>
             <div className={styles.label}>
                 <label>
@@ -197,15 +273,17 @@ export default function CabinetXml() {
                     </div>
                 </div>
             ))}
-
-            <pre>
-                <code class="language-xml">
-                {generateXML()}
-                </code>
-                
-            </pre>
+            <div className={styles.preContainer}>
+                <button className={styles.copyButton} onClick={copyToClipboard}>Copy to Clipboard</button>
+                <pre>
+                    <code class="language-xml">
+                        {generateXML()}
+                    </code>
+                </pre>
+            </div>
             {/* <XMLViewer xml={generateXML()} /> */}
         </div>
+        </div>
     );
-    
+
 }

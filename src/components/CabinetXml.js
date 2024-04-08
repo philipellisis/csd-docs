@@ -22,48 +22,79 @@ export default function CabinetXml() {
     const handle4MatrixToyChange = () => {
         setNumToys(6);
         setToys(
-                [
-                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
-                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
-                ]
-            )
+            [
+                { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+            ]
+        )
+    }
+    const handle5MatrixToyChange = () => {
+        setNumToys(7);
+        setToys(
+            [
+                { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+            ]
+        )
     }
     const handle6MatrixToyChange = () => {
         setNumToys(8);
         setToys(
-                [
-                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
-                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
-                ]
-            )
+            [
+                { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+            ]
+        )
+    }
+
+    const handle7MatrixToyChange = () => {
+        setNumToys(9);
+        setToys(
+            [
+                { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+            ]
+        )
     }
 
     const handle8MatrixToyChange = () => {
         setNumToys(10);
         setToys(
-                [
-                    { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
-                    { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                    { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
-                ]
-            )
+            [
+                { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
+                { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+            ]
+        )
     }
     const handleNumToysChange = (event) => {
         const newNumToys = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 6);
@@ -197,92 +228,93 @@ export default function CabinetXml() {
 
     return (
         <div>
-        <div className={styles.container}>
-        Press buttons below to set pre-configured cabinet files (All configurations include L/R side strip LEDs)
-        <div>
-            < button className={styles.Button} onClick={handleSingleMatrixToyChange}>Single Matrix Config</button>
-            < button className={styles.Button} onClick={handle4MatrixToyChange}>4 Matrix Config</button>
-            < button className={styles.Button} onClick={handle6MatrixToyChange}>6 Matrix Config</button>
-            < button className={styles.Button} onClick={handle8MatrixToyChange}>8 Matrix Config</button>
-        </div>
-
-    </div>
-        <div className={styles.container}>
-
-
-            <div className={styles.label}>
-                <label>
-                    Number of LED Outputs (1-10):
-                    <input className={styles.input} type="number" value={numToys} onChange={handleNumToysChange} min="1" max="10" />
-                </label>
-
-            </div>
-            <div className={styles.label}>
-                <label>
-                    COM Port Number (Find in device manager):
-                    <input className={styles.input} type="number" value={comPort} onChange={handleComPortChange} min="1" max="30" />
-                </label>
-
-            </div>
-            <div className={styles.label}>
-                <label>
-                    DTR Enabled (Only enable if using a Wemos S2 or S3 mini)
-                    <input
-                        className={styles.input}
-                        type="checkbox"
-                        checked={dtrEnable}
-                        onChange={handleDtrEnableChange}
-                    />
-                </label>
-            </div>
-            {[...Array(numToys)].map((_, index) => (
-                <div className={styles.toyContainer} key={index}>
-                    <div className={styles.label}>
-                        <label>
-                            Name of Toy {index + 1} (Same name will combine outputs into one):
-                            <input className={styles.input} type="text" value={toys[index]?.name || ''} onChange={(e) => handleToyChange(index, 'name', e.target.value)} />
-                        </label>
-                    </div>
-                    <div className={styles.label}>
-                        <label>
-                            Number of LEDs:
-                            <input className={styles.input} type="number" value={toys[index]?.numberOfLeds || ''} onChange={(e) => handleToyChange(index, 'numberOfLeds', e.target.value)} min="1" max="4096" />
-                        </label>
-                    </div>
-                    <div className={styles.label}>
-                        <label>
-                            Width:
-                            <input className={styles.input} type="number" value={toys[index]?.width || ''} onChange={(e) => handleToyChange(index, 'width', e.target.value)} min="1" />
-                        </label>
-                    </div>
-                    <div className={styles.label}>
-                        <label>
-                            Height:
-                            <input className={styles.input} type="number" value={toys[index]?.height || ''} onChange={(e) => handleToyChange(index, 'height', e.target.value)} min="1" />
-                        </label>
-                    </div>
-                    <div className={styles.label}>
-                        <label>
-                            LED Strip Arrangement:
-                            <select className={styles.input} value={toys[index]?.ledStripArrangement || ''} onChange={(e) => handleToyChange(index, 'ledStripArrangement', e.target.value)}>
-                                {ledStripArrangements.map(arrangement => (
-                                    <option key={arrangement} value={arrangement}>{arrangement}</option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+            <div className={styles.container}>
+                Press buttons below to set pre-configured cabinet files (All configurations include L/R side strip LEDs)
+                <div>
+                    < button className={styles.Button} onClick={handleSingleMatrixToyChange}>Single Matrix Config</button>
+                    < button className={styles.Button} onClick={handle4MatrixToyChange}>4 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle4MatrixToyChange}>5 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle6MatrixToyChange}>6 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle6MatrixToyChange}>7 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle8MatrixToyChange}>8 Matrix Config</button>
                 </div>
-            ))}
-            <div className={styles.preContainer}>
-                <button className={styles.copyButton} onClick={copyToClipboard}>Copy to Clipboard</button>
-                <pre>
-                    <code class="language-xml">
-                        {generateXML()}
-                    </code>
-                </pre>
+
             </div>
-            {/* <XMLViewer xml={generateXML()} /> */}
-        </div>
+            <div className={styles.container}>
+
+
+                <div className={styles.label}>
+                    <label>
+                        Number of LED Outputs (1-10):
+                        <input className={styles.input} type="number" value={numToys} onChange={handleNumToysChange} min="1" max="10" />
+                    </label>
+
+                </div>
+                <div className={styles.label}>
+                    <label>
+                        COM Port Number (Find in device manager):
+                        <input className={styles.input} type="number" value={comPort} onChange={handleComPortChange} min="1" max="30" />
+                    </label>
+
+                </div>
+                <div className={styles.label}>
+                    <label>
+                        DTR Enabled (Only enable if using a Wemos S2 or S3 mini)
+                        <input
+                            className={styles.input}
+                            type="checkbox"
+                            checked={dtrEnable}
+                            onChange={handleDtrEnableChange}
+                        />
+                    </label>
+                </div>
+                {[...Array(numToys)].map((_, index) => (
+                    <div className={styles.toyContainer} key={index}>
+                        <div className={styles.label}>
+                            <label>
+                                Name of Toy {index + 1} (Same name will combine outputs into one):
+                                <input className={styles.input} type="text" value={toys[index]?.name || ''} onChange={(e) => handleToyChange(index, 'name', e.target.value)} />
+                            </label>
+                        </div>
+                        <div className={styles.label}>
+                            <label>
+                                Number of LEDs:
+                                <input className={styles.input} type="number" value={toys[index]?.numberOfLeds || ''} onChange={(e) => handleToyChange(index, 'numberOfLeds', e.target.value)} min="1" max="4096" />
+                            </label>
+                        </div>
+                        <div className={styles.label}>
+                            <label>
+                                Width:
+                                <input className={styles.input} type="number" value={toys[index]?.width || ''} onChange={(e) => handleToyChange(index, 'width', e.target.value)} min="1" />
+                            </label>
+                        </div>
+                        <div className={styles.label}>
+                            <label>
+                                Height:
+                                <input className={styles.input} type="number" value={toys[index]?.height || ''} onChange={(e) => handleToyChange(index, 'height', e.target.value)} min="1" />
+                            </label>
+                        </div>
+                        <div className={styles.label}>
+                            <label>
+                                LED Strip Arrangement:
+                                <select className={styles.input} value={toys[index]?.ledStripArrangement || ''} onChange={(e) => handleToyChange(index, 'ledStripArrangement', e.target.value)}>
+                                    {ledStripArrangements.map(arrangement => (
+                                        <option key={arrangement} value={arrangement}>{arrangement}</option>
+                                    ))}
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                ))}
+                <div className={styles.preContainer}>
+                    <button className={styles.copyButton} onClick={copyToClipboard}>Copy to Clipboard</button>
+                    <pre>
+                        <code class="language-xml">
+                            {generateXML()}
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
     );
 

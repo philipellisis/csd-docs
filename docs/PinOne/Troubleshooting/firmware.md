@@ -10,13 +10,20 @@ When updating the firmware, when you see an image like the following, then you c
 
 If you aren't seeing that dialog, then see the sections below for getting the firmware to upload.
 
+One way I've seen that causes the PinOne to almost always take a firmware update is to do the following:
+1. click the `Update Firmware` button, 
+2. wait for the dialog where it says "Ensure you have one PinOne ..." and unplug the PinOne
+3. Plug the PinOne in and wait for the windows notification sound that a USB device has been plugged in (or just wait half a second) and immediately press the "OK" button on the dialog
+4. Hopefully the firmware will no successfully update
+
 ## When clicking the "Update firmware" button, nothing seems to happen
 
 If you are having trouble updating the firmware on your system, sometimes the COM ports in windows can get a little mixed up and there are a few things you can do to try to resolve the issue.
 
 1. First just try to unplug the PinOne USB cable and try again. Typically this will allow it to update
 2. Next, if you still can't get it to update after unplugging the USB cable, also try to manually select the COM port in the menu when updating instead of using the "auto" option
-3. If this still doesn't work, there are a few more things you can try:
+3. Make sure the software has been unzipped and is not running in a zipped directory
+4. If this still doesn't work, there are a few more things you can try:
 
 ### Re-assign the COM port in windows:
 

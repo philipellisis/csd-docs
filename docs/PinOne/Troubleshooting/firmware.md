@@ -14,7 +14,7 @@ One way I've seen that causes the PinOne to almost always take a firmware update
 1. click the `Update Firmware` button, 
 2. wait for the dialog where it says "Ensure you have one PinOne ..." and unplug the PinOne
 3. Plug the PinOne in and wait for the windows notification sound that a USB device has been plugged in (or just wait half a second) and immediately press the "OK" button on the dialog
-4. Hopefully the firmware will no successfully update
+4. Hopefully the firmware will now successfully update
 
 ## When clicking the "Update firmware" button, nothing seems to happen
 

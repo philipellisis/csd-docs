@@ -5,10 +5,10 @@ import styles from './cabinet.module.css';
 export default function CabinetXml() {
     const [numToys, setNumToys] = useState(3);
     const [comPort, setComPort] = useState(1);
-    const [dtrEnable, setDtrEnable] = useState(false);
+    const [dtrEnable, setDtrEnable] = useState(true);
     const [toys, setToys] = useState([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
     { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-    { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+    { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'TopDownAlternateRightLeft' }
     ]);
 
 
@@ -16,7 +16,7 @@ export default function CabinetXml() {
         setNumToys(3);
         setToys([{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
         { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-        { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+        { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'TopDownAlternateRightLeft' }
         ])
     }
     const handle4MatrixToyChange = () => {
@@ -25,10 +25,10 @@ export default function CabinetXml() {
             [
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
                 { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '64', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' }
             ]
         )
     }
@@ -38,11 +38,11 @@ export default function CabinetXml() {
             [
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
                 { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '80', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' }
             ]
         )
     }
@@ -52,12 +52,12 @@ export default function CabinetXml() {
             [
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
                 { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '96', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' }
             ]
         )
     }
@@ -68,13 +68,13 @@ export default function CabinetXml() {
             [
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
                 { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '112', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' }
             ]
         )
     }
@@ -85,14 +85,14 @@ export default function CabinetXml() {
             [
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
                 { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' },
-                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'BottomUpAlternateRightLeft' }
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' },
+                { name: 'Back Panel', numberOfLeds: '256', width: '128', height: '16', ledStripArrangement: 'TopDownAlternateRightLeft' }
             ]
         )
     }

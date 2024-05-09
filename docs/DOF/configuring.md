@@ -8,7 +8,8 @@ In order to configure DOF, you need to setup a configuration file. The easiest w
 
 ## Selecting your device
 Once you have an account setup, navigate to ```My Account``` and select the number of devices for your setup.
- - For the PinOne or KL25Z Pinscape device, select ```pinscape```
+ - For the PinOne device, select ```PinOne```
+ - For the KL25Z Pinscape device, select ```pinscape```
  - For the 8 output ```sainsmart``` board that runs the plug and play shaker motor or some starter kits, select ```sainsmart```
  - For the Addressable LED board, select ```WS2811```
  
@@ -46,13 +47,6 @@ For addressable LEDs, just select each output based on the type of LED strip you
 
 Once you have everything set in the config tool, click the ```save``` button, then ```download config```. This will download a copy of the configuration files onto your PC. All you need to do now is move the files into your ```C:\DirectOutput\``` directory (or wherever DOF is installed on your PC) The end result should look something like the following:
 ![image](./img/DOF-config-3.png)
-
-
-:::note
-
-For PinOne board, you will need to rename the file from `directoutputconfig51.ini` to `directoutputconfig11.ini`
-
-:::
 
 
 ## Configuration Complete!

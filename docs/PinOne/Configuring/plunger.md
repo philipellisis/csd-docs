@@ -24,7 +24,9 @@ This setting will ignore small plunger movements when it isn't actively moving a
 
 ## Plunger Quick Release
 
-This setting will cause the plunger to immediately move from the held position to minimum position when released. This can be helpful in some VPX games where the plunger movement can cause some games to have unreliable releases. When setting this, make sure you have the "Launch button" set in both VPX and in the config tool as this feature actually utilizes the VPX launch button to send the ball at the exact moment you release the plunger.
+This setting will cause the plunger to immediately move from the held position to minimum position when released. This should be turned on for accurate VPX plunger release. When turning this on, you also need to ensure to set the `Plunger button` to the same button that is set for the `launch button` in the config tool:
+
+![image](../img/vpx2.png)
 
 ## Disable Accelerometer on Movement
 

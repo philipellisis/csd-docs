@@ -6,7 +6,10 @@ sidebar_position: 2
 
 ## Testing your setup and updating firmware
 
-You can use the config tool to test your outputs and make sure they are all setup OK before trying to get them working in DOF. Download it here: [here](https://github.com/philipellisis/wemos-configurator/releases/latest/download/CSDAddressableControllerTool.exe)
+You can use the config tool to test your outputs and make sure they are all setup OK before trying to get them working in DOF. Download it here: 
+
+[![Get the config tool](../PinOne/Configuring/img/button.svg)](https://github.com/philipellisis/wemos-configurator/releases/latest/download/CSDAddressableControllerTool.exe)
+
 
 ## Configuring for DOF
 

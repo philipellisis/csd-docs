@@ -233,9 +233,9 @@ export default function CabinetXml() {
                 <div>
                     < button className={styles.Button} onClick={handleSingleMatrixToyChange}>Single Matrix Config</button>
                     < button className={styles.Button} onClick={handle4MatrixToyChange}>4 Matrix Config</button>
-                    < button className={styles.Button} onClick={handle4MatrixToyChange}>5 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle5MatrixToyChange}>5 Matrix Config</button>
                     < button className={styles.Button} onClick={handle6MatrixToyChange}>6 Matrix Config</button>
-                    < button className={styles.Button} onClick={handle6MatrixToyChange}>7 Matrix Config</button>
+                    < button className={styles.Button} onClick={handle7MatrixToyChange}>7 Matrix Config</button>
                     < button className={styles.Button} onClick={handle8MatrixToyChange}>8 Matrix Config</button>
                 </div>
 

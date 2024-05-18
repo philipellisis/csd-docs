@@ -2,7 +2,9 @@
 sidebar_position: 4
 ---
 
-# No backbox sound in some VPX games
+# Troubleshooting
+
+### No backbox sound in some VPX games
 
 I have found that sometimes depending on the soundcard or driver, that all the sound is sent to the center channel speaker (but there isn't a center channel speaker in SSF!) The fix for this issue is quite simple -- just download and install [equalizer apo](https://equalizerapo.com/) 
 

@@ -33,6 +33,8 @@ If you want your buttons to always light up to a certain color, you can do that 
 1. Set the Max Output Value to the number you want
 2. Set the "light show" to "Light Show High" this will ensure the button LED is always at maximum intensity. 
 
-Note that the secondary light show will still apply when the buttons are in "attract mode" but as soon as you press a button, the colors will change to the setting defined. An example of this setting for the RGB Flippers is below. In this case, the buttons will always be a light purple color.
+When you click save and exit the menu, the buttons will turn off. The button colors will turn on to the set values once you exit the config tool and wait for the light show to start. The number of seconds before the light show turns on is configurable on the main settings menu, but is defaulted to 10 seconds.
+
+Note that the secondary light show will still apply when the buttons are in "attract mode" (Attract mode can be disabled in the main settings menu) but as soon as you press a button, the colors will change to the setting defined. An example of this setting for the RGB Flippers is below. In this case, the buttons will always be a light purple color.
 
 ![image](./img/settingsOutputs2.png)

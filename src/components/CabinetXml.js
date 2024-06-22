@@ -4,10 +4,7 @@ import styles from './cabinet.module.css';
 
 export default function CabinetXml() {
     const [numControllers, setNumControllers] = useState(1);
-    const [numToys, setNumToys] = useState([3]);
-    const [comPort, setComPort] = useState([1]);
     const [controllers, setControllers] = useState([{ name: 'WemosD1MPStripController', numToys: 3, comPort: 1, dtrEnable: true}]);
-    const [dtrEnable, setDtrEnable] = useState([true]);
     const [toys, setToys] = useState([
         [{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
         { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
@@ -16,14 +13,14 @@ export default function CabinetXml() {
 
 
     const handleSingleMatrixToyChange = () => {
-        setNumToys([3]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 3, comPort: 1, dtrEnable: true}]);
         setToys([[{ name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
         { name: 'Left Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'RightLeftBottomUp' },
         { name: 'Back Panel', numberOfLeds: '256', width: '32', height: '8', ledStripArrangement: 'TopDownAlternateRightLeft' }
         ]])
     }
     const handle4MatrixToyChange = () => {
-        setNumToys([6]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 6, comPort: 1, dtrEnable: true}]);
         setToys(
             [[
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
@@ -36,7 +33,7 @@ export default function CabinetXml() {
         )
     }
     const handle5MatrixToyChange = () => {
-        setNumToys([7]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 7, comPort: 1, dtrEnable: true}]);
         setToys(
             [[
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
@@ -50,7 +47,7 @@ export default function CabinetXml() {
         )
     }
     const handle6MatrixToyChange = () => {
-        setNumToys([8]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 8, comPort: 1, dtrEnable: true}]);
         setToys(
             [[
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
@@ -66,7 +63,7 @@ export default function CabinetXml() {
     }
 
     const handle7MatrixToyChange = () => {
-        setNumToys([9]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 9, comPort: 1, dtrEnable: true}]);
         setToys(
             [[
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
@@ -83,7 +80,7 @@ export default function CabinetXml() {
     }
 
     const handle8MatrixToyChange = () => {
-        setNumToys([10]);
+        setControllers([{ name: 'WemosD1MPStripController', numToys: 10, comPort: 1, dtrEnable: true}]);
         setToys(
             [[
                 { name: 'Right Side', numberOfLeds: '144', width: '1', height: '144', ledStripArrangement: 'LeftRightBottomUp' },
@@ -120,38 +117,25 @@ export default function CabinetXml() {
         }
         if (controllers.length < newNumControllers) {
             const newControllers = [...controllers];
-            newControllers.push({ name: 'WemosD1MPStripController' });
+            newControllers.push({ name: 'WemosD1MPStripController', numToys: 3, comPort: 1, dtrEnable: true});
             setControllers(newControllers);
         }
     };
 
     const handleControllerChange = (index, key, value) => {
+        let newValue = '0'
+        if (key === 'numToys') {
+            newValue = Math.min(Math.max(1, parseInt(value || '0', 10)), 6);
+        } else {
+            newValue = value;
+        }
+        console.log(index, key, newValue)
         const updatedControllers = [...controllers];
-        updatedControllers[index] = { ...updatedControllers[index], [key]: value };
-
-        controllers.forEach((toy, toyIndex) => {
-            controllers.forEach((toyDup, dupIndex) => {
-                if (toy.name === toyDup.name && toyIndex > dupIndex) {
-                    updatedControllers[toyIndex] = { ...updatedControllers[toyIndex], [key]: value };
-                }
-            })
-        })
+        updatedControllers[index] = { ...updatedControllers[index], [key]: newValue };
+        console.log(updatedControllers)
         setControllers(updatedControllers)
     };
 
-    const handleComPortChange = (index, event) => {
-        const newComPort = Math.min(Math.max(1, parseInt(event.target.value || '0', 10)), 30);
-        const newCom = [...comPort];
-        newCom[index] = newComPort;
-        setComPort(newCom);
-
-    }
-
-    const handleDtrEnableChange = (index, event) => {
-        const newDtr = [...dtrEnable];
-        newDtr[index] = event.target.checked;
-        setDtrEnable(newDtr);
-    }
 
     const handleToyChange = (controllerIndex, index, key, value) => {
         const updatedToys = [...toys[controllerIndex]];
@@ -198,8 +182,8 @@ export default function CabinetXml() {
                     wemosController.ele("NumberOfLedsStrip" + (index + 1)).txt(toy.numberOfLeds.toString()).up();
                 }
             });
-            if (comPort[index]) {
-                wemosController.ele('ComPortName').txt('COM' + comPort[index].toString()).up();
+            if (controller.comPort) {
+                wemosController.ele('ComPortName').txt('COM' + controller.comPort.toString()).up();
             }
             
 
@@ -211,7 +195,7 @@ export default function CabinetXml() {
                 wemosController.ele('ComPortHandshakeEndWaitMs').txt('100').up();
                 wemosController.ele('SendPerLedstripLength').txt('true').up();
                 wemosController.ele('UseCompression').txt('true').up();
-                wemosController.ele('ComPortDtrEnable').txt(dtrEnable[index]).up();
+                wemosController.ele('ComPortDtrEnable').txt(controller.dtrEnable).up();
             }
 
             wemosController.ele('TestOnConnect').txt('true').up();
@@ -324,14 +308,14 @@ export default function CabinetXml() {
                 <div className={styles.label}>
                     <label>
                         Number of LED Outputs (1-10):
-                        <input className={styles.input} type="number" value={numToys[controllerIndex]} onChange={(e) => handleNumToysChange(controllerIndex, e)} min="1" max="10" />
+                        <input className={styles.input} type="number" value={controllers[controllerIndex]?.numToys || 0} onChange={(e) => handleControllerChange(controllerIndex, 'numToys', e.target.value)} min="1" max="10" />
                     </label>
 
                 </div>
                 <div className={styles.label}>
                     <label>
                         COM Port Number (Find in device manager):
-                        <input className={styles.input} type="number" value={comPort[controllerIndex]} onChange={(e) => handleComPortChange(controllerIndex, e)} min="1" max="30" />
+                        <input className={styles.input} type="number" value={controllers[controllerIndex]?.comPort || 1} onChange={(e) => handleControllerChange(controllerIndex, 'comPort', e.target.value)} min="1" max="30" />
                     </label>
 
                 </div>
@@ -341,12 +325,12 @@ export default function CabinetXml() {
                         <input
                             className={styles.input}
                             type="checkbox"
-                            checked={dtrEnable[controllerIndex]}
-                            onChange={(e) => handleDtrEnableChange(controllerIndex, e)}
+                            checked={controllers[controllerIndex]?.dtrEnable || false}
+                            onChange={(e) => handleControllerChange(controllerIndex, 'dtrEnable', e.target.checked)}
                         />
                     </label>
                 </div>
-                {[...Array(numToys[controllerIndex])].map((_, index) => (
+                {[...Array(controllers[controllerIndex].numToys)].map((_, index) => (
                     <div className={styles.toyContainer} key={index}>
                         <div className={styles.label}>
                             <label>

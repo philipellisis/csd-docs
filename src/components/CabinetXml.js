@@ -177,9 +177,9 @@ export default function CabinetXml() {
             wemosController.ele('Name').txt('LED Strips ' + index).up();
             // Add other elements to WemosD1MPStripController here
             // ...
-            toys.forEach((toy, index) => {
+            toys[index].forEach((toy, toyIndex) => {
                 if (toy && toy.name && toy.numberOfLeds) {
-                    wemosController.ele("NumberOfLedsStrip" + (index + 1)).txt(toy.numberOfLeds.toString()).up();
+                    wemosController.ele("NumberOfLedsStrip" + (toyIndex + 1)).txt(toy.numberOfLeds.toString()).up();
                 }
             });
             if (controller.comPort) {

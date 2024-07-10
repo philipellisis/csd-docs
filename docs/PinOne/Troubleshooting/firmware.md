@@ -16,6 +16,14 @@ One way I've seen that causes the PinOne to almost always take a firmware update
 3. Plug the PinOne in and wait for the windows notification sound that a USB device has been plugged in (or just wait half a second) and immediately press the "OK" button on the dialog
 4. Hopefully the firmware will now successfully update
 
+## How to update the firmware using the "reset" button (this is the most reliable way, if nothing else works, this will almost always work)
+
+1. check the com ports that are available in the dropdown and make note of them
+2. press the reset button on the PinOne board. If you don't know where it is, it is highlighted on [this page](../../Products/PinOne-Control-Board/index#hooking-it-up)
+3. make note of the new com port that has been added to the dropdown list and select it
+4. press the reset button again, and within 5 seconds use the context "Advanced -> update firmware with reset button" option
+5. Watch as the firmware updates successfully this time.
+
 ## When clicking the "Update firmware" button, nothing seems to happen
 
 If you are having trouble updating the firmware on your system, sometimes the COM ports in windows can get a little mixed up and there are a few things you can do to try to resolve the issue.

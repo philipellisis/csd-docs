@@ -125,7 +125,7 @@ export default function CabinetXml() {
     const handleControllerChange = (index, key, value) => {
         let newValue = '0'
         if (key === 'numToys') {
-            newValue = Math.min(Math.max(1, parseInt(value || '0', 10)), 6);
+            newValue = Math.min(Math.max(1, parseInt(value || '0', 10)), 10);
         } else {
             newValue = value;
         }

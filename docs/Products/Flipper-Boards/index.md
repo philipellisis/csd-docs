@@ -53,8 +53,14 @@ Below is a wiring diagram showing how to connect all the options listed above
 ![image](./img/flipper-boards-v2-2.jpg)
 
 
-## Bypassing to run directly off the PinOne board
+## Bypassing to run directly off the PinOne board (Or PinOne Mini board)
 
 In case you have upgraded to the PinOne board and want to use the flipper boards just for the life extender functionality, you can bypass them by connecting a jumper to the button input and connecting one of the PinOne Main outputs directly to the power input on the flipper board. The picture below demonstrates how this can be done.
 
 ![image](./img/flipper-boards-v2-4.jpg)
+
+## Hooking up in conjunction with PinOne Mini (Or PinOne Main board) to get 4 solenoids
+
+In this scenario, you can use the encoder on the flipper boards to send a signal to the PinOne Mini board so you get button presses, and then use the other two outputs on the PinOne Mini so you can add an additional 2 solenoids to your setup for a total of 4 solenoids. 
+
+![image](./img/FlipperBoardHookupToPinOneMini.jpg)

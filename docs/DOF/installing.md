@@ -19,3 +19,4 @@ When installing the 64 bit version, make sure to place it in a different directo
 2. After install, copy the entire folder (typically C:/DirectOutput) and rename the copy as C:/DirectOutput64
 3. Now install the 32 bit version of DOF.
 4. After install, check to ensure that the {Visual_Pinball_Install_Location}/tables/plugins directory has a shortcut to the C:/DirectOutput directory, and the {Visual_Pinball_Install_Location}/tables/plugins64 directory has a shortcut to the C:/DirectOutput64 directory. 
+5. One other thing to check after the install is to ensure you can run the `RegisterDirectOutputComObject.exe` file in the C:/DirectOutput directory. I've had a few instances where a dll was missing after the install. Just running the 32 bit installer again fixed the problem in all cases.

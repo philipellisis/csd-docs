@@ -23,7 +23,7 @@ For the larger cabinet setup, I recommend the PinOne main board along with the b
 
 ### If you want a real plunger
 
-You have a few options here. If you are getting the main board (above) then you can just get the "plunger only" option. If you just want a standalone plunger, then you can get the full plunger kit. In either case you have the option of also getting a Williams style plunger included in the kit or just the board (you will need to provide the physical plunger, which if you have a Legends Pinball cabinet, then this plunger will mount to it) 
+You have a few options here. If you are getting the main board or mini board separately (mentioned above) then you should just get the "plunger only" option. If you just want a standalone plunger "kit" that you can use with your system without having to purchase anything else, then you can get the full plunger kit and it comes with the PinOne mini board. In either case you have the option of also getting a Williams style plunger included in the kit or just the board (you will need to provide the physical plunger, which if you have a Legends Pinball cabinet or Arcade 1up, then this plunger board will mount to it) 
 - [Plunger](https://www.clevelandsoftwaredesign.com/pinball-parts/p/virtual-pinball-plunger-attachment)
 
 ### If you want solenoids
@@ -79,6 +79,14 @@ If you want an easy way to access internal cabinet functions like volume up/down
 
 - [Service Board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/expansion-breakout-board-zx5y6)
 
+### Addressable LEDs
+
+Adding Addressable LEDs to your machine has never been easier, my board feeds all the power directly to your LED strips so you don't need to solder anything to get it to work. If you purchase my panels, they even come with easy quick connects so you can plug them right into the board. If you want to roll your own setup, then I sell the Addressable LED board separately as well as a few options for the matrix and side rail addressable LEDs. Make sure to get the extension cables for any runs you might want to make in the machine. Most people get the kit with 6 panels, and that leaves two open outputs for speaker rings or something else you might want to add.
+
+- [Addressable LED Kit](https://www.clevelandsoftwaredesign.com/pinball-parts/p/addressable-led-plug-and-play-kit)
+- [Addressable LED Board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/addressable-led-controller)
+- [HD Panels](https://www.clevelandsoftwaredesign.com/pinball-parts/p/addressable-led-panel)
+- [LED Strips](https://www.clevelandsoftwaredesign.com/pinball-parts/p/144-led-addressable-strip)
 
 ### To make a (duplicate) PinOne Mini Machine
 

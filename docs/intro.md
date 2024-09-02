@@ -23,6 +23,10 @@ The [SSF Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/high-powe
 
 The [Builders Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/virtual-pinball-builders-kit) are the (almost) all inclusive kits that give you the ability to get a fairly comprehensive pinball machine in one simple to install package. There are still a lot of parts to go through, mount and install, but the end result is a pinball machine with all the best toys and lights. If you want something that is even better than most pre-built machines come with at a fraction of the cost without the time investment of doing it all yourself, then these are the way to go.
 
+### Addressable LED Kits
+
+The [Addressable LED Kits](https://www.clevelandsoftwaredesign.com/pinball-parts/p/addressable-led-plug-and-play-kit) offer a full addressable LED solution that comes with lights for the side rails of the machine, and up to 8 HD panels on the backglass for a truly awesome experience.
+
 ### Piecing it together (DIY Option)
 
 If none of those options look good for you, you can also get all the items individually. I have a fairly good guide for all the stuff I offer in the [what to buy](./what-to-buy.md) guide

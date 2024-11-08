@@ -15,6 +15,6 @@ The builders kits come with most of my products, all wired and ready to put into
 <Video source="https://www.youtube.com/embed/N1xO_rWgUoI"></Video>
 
 ### Video showing how to install 
-This is one of the older models of the extreme kit. Some things have changed, but it is essentially the same process only easier
+This is an install of the complete extreme kit along with the SSF kit. This is great to watch if you want to understand how to install the entire thing from start to finish
 
-<Video source="https://www.youtube.com/embed/Mnur58NnyYE"></Video>
+<Video source="https://www.youtube.com/embed/9LoyJR7UnCA"></Video>

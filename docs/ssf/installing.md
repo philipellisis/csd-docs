@@ -10,4 +10,7 @@ The best way to know how to install the kit into your machine, is to simply foll
 
 ![image](./img/SSF-Connection-Guide.png)
 
-<Video source="https://www.youtube.com/embed/9zCc5HWmZ40"></Video>
+### Use the link below to go right to the SSF install timestamp
+[Video link](https://youtu.be/9LoyJR7UnCA?t=2822)
+
+<Video source="https://www.youtube.com/embed/9LoyJR7UnCA?t=2822"></Video>

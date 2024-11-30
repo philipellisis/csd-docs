@@ -8,9 +8,9 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 
 ## Create your Steam Game controller configuration using the PinOne Configuration tool Input screen:
 
-1. Download the config tool from [here](https://github.com/philipellisis/virtual-pinball-board-configurator/releases/latest/download/CSDControllerTool.exe)
-2. Connect to the PinOne board and navigate to the "Input" screen
-3. Use the dropdowns to assign the correct button to the XBox controller shown on the page. You can also click on the appropriate button on the controller and push the button you want to assign to it as well
+1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.8.0/pinone-config-tool.1.18.0.exe)
+2. Connect to the PinOne board and navigate to the "Steam Config" screen
+3. Use the dropdowns to assign the correct button to the XBox controller shown on the page.
 4. Once you have setup the controller the way you like, you can click the save button to save the controller configuration into Steam. At this point you are done and can start Steam and the PinOne should be recognized. If it isn't there ready to test, then you likely need to exit Steam and click the button to save the file again.
 5. If you would prefer to manually update the calibration in Steam, you can copy the configuration to use inside the Steam calibration menu (shown below)
 

@@ -14,7 +14,7 @@ sidebar_position: 1
 - 24 inputs for buttons and other devices
 - Separate input for potentiometer based plunger
 - High accuracy accelerometer and gyroscope for excellent nudge support
-- Super low latency "0 delay" button encoder
+- Super low latency "0 delay" button encoder with less than 1ms delay
 
 ## Software Enabled Features
 
@@ -27,6 +27,6 @@ sidebar_position: 1
 - Outputs can be configured for "Night Mode", allowing certain outputs to turn off when the night mode switch is activated
 - Accelerometer has a dead zone tuning utility that allows you to capture the ideal dead zone to ignore while toys are activated to ensure there is never any nudge event set off by the toys in your cabinet
 - Accelerometer can be configured to activate a button press when it reaches a certain level, effectively simulating a tilt bob via software
-- Plunger can be configured to activate a button press when pushed in a certain level and also when extended to a certain level, allowing the plunger to be used normally to activate the fire button
-- button #9 (normally the fire button) can be programmed as a "shift" button that will allow buttons 5-8 to actually trigger buttons 25-28.
+- Plunger can be configured to actiSvate a button press when pushed in a certain level and also when extended to a certain level, allowing the plunger to be used normally to activate the fire button
+- button #9 (normally the fire button) can be programmed as a "shift" button that will allow buttons 5-12 to actually trigger buttons 25-32.
 - Solenoid sharing feature allows a good solenoid experience even in very limited cabinet sizes as the software will route solenoid trigger events across all available solenoids

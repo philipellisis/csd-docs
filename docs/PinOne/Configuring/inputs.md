@@ -1,10 +1,15 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Inputs
 
 ![image](./img/buttons.png)
+
+### Shift Button
+
+This dropdown selects which button is assigned as the "shift button" when pressing this button, buttons 5-8 will actually trigger 25-28, allowing those 4 buttons to have dual actions.
+
 
 ## Steam calibration text
 

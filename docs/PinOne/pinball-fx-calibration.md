@@ -4,7 +4,7 @@ sidebar_position: 1.3
 
 # Pinball FX Calibration
 
-Before you can use the controller in Pinball FX, you first need to conifgure the controller in Steam. You can do that by following the instructions [here](./steam-calibration)
+Before you can use the controller in Pinball FX, you first need to configure the controller in Steam. You can do that by following the instructions [here](./steam-calibration)
 
 1. In Pinball FX, all you need to do is set the controller as show below and you plunger nudge and all buttons should work as desired:
 

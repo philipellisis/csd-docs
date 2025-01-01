@@ -25,3 +25,11 @@ Channel: RL RR SL SR
 Preamp: +12 dB
 GraphicEQ: 25 6; 40 6; 63 6; 100 0; 160 0; 250 0; 400 0; 630 0; 1000 0; 1600 0; 2500 0; 4000 0; 6300 0; 10000 0; 16000 0
 ```
+
+If you still don't have backbox sound, there is an additional line you can add to the configuration file that redirects center channel speaker sound to the left and right speakers:
+
+```
+Copy: L=0.5*L+0.5*C R=0.5*R+0.5*C
+```
+
+You can adjust the 0.5 to a higher number if you need more sound going to the speakers.

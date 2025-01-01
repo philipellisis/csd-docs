@@ -25,7 +25,7 @@ DEBUG=0
 # You can point to any of your directoutputconfig.ini files, but only one
 # Keep this as the first pararameter to process in your INI file.  The order past ths point is not relevant
 
-DIRECTOUTPUTCONFIG=C:\DirectOutput\directoutputconfig11.ini
+DIRECTOUTPUTCONFIG=C:\DirectOutput\config\directoutputconfig11.ini
 
 # The location of the .FX3 game specific files included with the DOFLinx release package
 # Ensure your path has a \ on the end of it
@@ -69,6 +69,8 @@ RGB_TRIGGER=FLIPPER
 RGB_MIN_TIME=1000
 
 
+
+
 # Turn on the attempt to make a full connection to Future Pinball when it is detected as running
 FP_ATTEMPT_LINK=1
 FP_LINK_WAIT_TIME=60000
@@ -91,6 +93,8 @@ LINK_ML=101,50,500,255
 LINK_MC=101,50,500,255
 LINK_MR=101,50,500,255
 
+#output for RGB Flipper lights
+RGB_OUTPUT=1016
 
 # Ports for the shaker
 #LINK_SH=112,1000,5000,255

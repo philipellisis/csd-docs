@@ -24,7 +24,7 @@ This setting will ignore small plunger movements when it isn't actively moving a
 
 ## Plunger Quick Release
 
-This setting will cause the plunger to immediately move from the held position to minimum position when released. This should be turned on for accurate VPX plunger release. When turning this on, you also need to ensure to set the `Plunger button` to the same button that is set for the `launch button` in the config tool:
+This setting will cause the plunger to immediately move from the held position to minimum position when released. This should be turned on and set to approximately 150ms delay for accurate VPX plunger release. When turning this on, you also need to ensure to set the `Plunger button` to the same button that is set for the `launch button` in the config tool:
 
 ![image](../img/vpx2.png)
 

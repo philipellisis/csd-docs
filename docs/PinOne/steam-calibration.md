@@ -8,7 +8,7 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 
 ## Create your Steam Game controller configuration using the PinOne Configuration tool Input screen:
 
-1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.0/pinone-config-tool.1.19.0.exe)
+1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.1/pinone-config-tool.1.19.1.exe)
 2. Connect to the PinOne board and navigate to the "Steam Config" screen
 3. Use the dropdowns to assign the correct button to the XBox controller shown on the page.
 4. Once you have setup the controller the way you like, you can click the save button to save the controller configuration into Steam. At this point you are done and can start Steam and the PinOne should be recognized. If it isn't there ready to test, then you likely need to exit Steam and click the button to save the file again.
@@ -29,7 +29,7 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 3. In the controller setup, you can use the values found with the config tool to paste into the screen, or if you want to use a pre-configured 9 button setup, you can simply paste the command below:
 
 ```
-030047518f0e00000792000000000000,Clev Soft PinOne,crc:5147,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b26,dpright:b27,dpup:b24,dpdown:b25,leftx:a0,lefty:a1,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:1,
+030000008f0e00000792000000000000,0x0e8f Clev Soft PinOne,crc:f7d4,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,rightx:a3,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:2,
 ```
 
 :::note
@@ -52,7 +52,7 @@ In case pasting the data into Steam does not work, you can easily add the contro
 	"SDL_GamepadBind"		"03000000de280000ff11000001000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
 03000000de280000ff11000000000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
 03000000de280000ff11000000007701,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:b12,dpleft:b13,dpright:b11,dpup:b10,leftshoulder:b4,leftstick:b8,lefttrigger:a4,leftx:a1,lefty:a0~,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a2~,start:b7,x:b2,y:b3,platform:Windows,
-030047518f0e00000792000000000000,Clev Soft PinOne,crc:5147,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,guide:b30,steam:1,"
+030000008f0e00000792000000000000,0x0e8f Clev Soft PinOne,crc:f7d4,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,rightx:a3,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:2,"
 	"Authentication"
 	{
 ```

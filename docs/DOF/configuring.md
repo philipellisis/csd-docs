@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Configuring DOF
 
-In order to configure DOF, you need to setup a configuration file. The easiest way to do this is to create an account and login to the [DOF Config tool](http://configtool.vpuniverse.com/login.php) 
+In order to configure DOF, you need to setup a configuration file. The easiest way to do this is to create an account and login to the [DOF Config tool](https://configtool.vpuniverse.com/) 
 
 ## Selecting your device
 Once you have an account setup, navigate to ```My Account``` and select the number of devices for your setup.

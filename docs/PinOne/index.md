@@ -10,7 +10,7 @@ The [PinOne board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinon
 
 
 ### Download the config tool here
-[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.1/pinone-config-tool.1.19.1.exe)
+[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.2/pinone-config-tool.1.19.2.exe)
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

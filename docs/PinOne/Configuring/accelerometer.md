@@ -10,7 +10,7 @@ Configuring the accelerometer is fairly straight forward, but a good configurati
 
 ### Setting sensitivity
 
-Set the sensitivity to 2G. You likely will not need to modify this setting as the values from the board are always normalized.
+2G is the most sensitive setting. At this setting, small nudges will make big impacts in the cursor. You can reduce the sensitivity to make the nudges have less effect, or you can also simply change the max value as another way to adjust the accelerometer sensitivity. 
 
 ### Setting the Pins checkbox
 

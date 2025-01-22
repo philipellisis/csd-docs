@@ -11,7 +11,7 @@ sidebar_position: 4
 1. check the com ports that are available in the dropdown and make note of them
 2. press the reset button on the PinOne board. If you don't know where it is, it is highlighted on [this page](../../Products/PinOne-Control-Board#hooking-it-up) 
 3. make note of the new com port that has been added to the dropdown list
-4. press the reset button again and within 5 seconds, select the new com port and press the `Update Firmware Manual Reset` 
+4. press the reset button again and within 5 seconds, select the new com port and press the `Update Firmware Manual Reset` Typically this will wait for you to press the reset button, but since you selected it in step 3, you can immediately press OK and it should attempt to install the firmware on the selected com port
 5. Watch as the firmware updates successfully this time.
 
 ### Re-assign the COM port in windows:

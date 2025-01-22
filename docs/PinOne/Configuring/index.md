@@ -8,9 +8,9 @@ sidebar_position: 4
 
 Note, when upgrading from 1.18, you need to adjust your accelerometer as the new firmware updates the accelerometer to use raw values, which affects scaling
 
-[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.2/pinone-config-tool.1.19.2.exe)
+[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.3/pinone-config-tool.1.19.3.exe)
 
-Configuring the PinOne board is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. The most recent version can always be fetched directly [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.2/pinone-config-tool.1.19.2.exe) Once running, click the `connect` button and you should see all the options appear on the side menu so you can easily test and configure the board.
+Configuring the PinOne board is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. The most recent version can always be fetched directly [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v1.19.3/pinone-config-tool.1.19.3.exe) Once running, click the `connect` button and you should see all the options appear on the side menu so you can easily test and configure the board.
 
 ![image](./img/mainWindowDisconnected.png)
 
@@ -25,7 +25,7 @@ Before you connect to the board. You are presented with four options to update t
 
 1. The first option is to `Update firmware Auto Reset` This option will work on boards with a USB C type connection sold after December of 2024. If you have a newer board you can just click this button to install the firmware. 
 
-2. The second option is the `Update Firmware Manual Reset` With this option, you need to first press the reset button on the PinOne board, then quickly select the COM port that displays and click the button to update the firmware. You have about 5 seconds from the time you click the reset button to the time you need to click the button.
+2. The second option is the `Update Firmware Manual Reset` With this option, after you press the button you need to reset the PinOne board by pushing the reset button on the board itself. If you have the x-input firmware installed, you can reset the PinOne by pushing buttons 3-9 at the same time (details below)
 
 3. The third option is just like the first, but it installs the X-Input firmware. This is if you do not care to use all the DOF configuration tool features and just want a game controller that works with steam and VPX without any hassle. Just make sure your plunger and accelerometer are calibrated to your liking before installing this firmware as you cannot run the config tool anymore after doing this.
 

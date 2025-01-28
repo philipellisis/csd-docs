@@ -37,6 +37,10 @@ A question I get a lot is how can I tell if I should get the PinOne Main board o
 | **Maximum Supported Outputs** | **63** | **63** |
 | **Maximum Supported Inputs** | **24** | **24** |
 
+## Models for mounting
+
+If you would like 3d print some models for mounting brackets, one of my customers created some nice designs from them [here](https://makerworld.com/en/models/968823)
+
 ## Hooking it all up
 
 ### Connecting to the PC

@@ -31,6 +31,10 @@ Adjusting the life extender hold voltage is done by rotating the potentiometer. 
 
 - The PWM on my boards are a higher frequency so you do not have the humming issue you will get when run through pinscape — these are completely silent.
 
+## Models for mounting
+
+If you would like 3d print some models for mounting brackets, one of my customers created some nice designs from them [here](https://makerworld.com/en/models/1002143)
+
 ## Life Extenders video showing them in action
 
 <Video source="https://www.youtube.com/embed/ZpK8SSSue9s?si=x1Sxj-dvSgc_8-Ey"></Video>

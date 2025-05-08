@@ -42,7 +42,11 @@ For addressable LEDs, just select each output based on the type of LED strip you
 
 ## Setting your config in DOF
 
-Once you have everything set in the config tool, click the ```save``` button, then ```download config```. This will download a copy of the configuration files onto your PC. All you need to do now is move the files into your ```C:\DirectOutput\config``` directory (or wherever DOF is installed on your PC) The end result should look something like the following:
+Once you have everything set in the config tool, click the ```update``` button, then ```generate config``` on the top right in the config tool. This will download a copy of the configuration files onto your PC. 
+
+![image](./img/DOF-config-8.png)
+
+All you need to do now is move the files into your ```C:\DirectOutput\config``` directory (or wherever DOF is installed on your PC) The end result should look something like the following:
 ![image](./img/DOF-config-3.png)
 
 

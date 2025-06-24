@@ -14,10 +14,10 @@ Configuring the PinOne board is designed to be extremely simple. Just plug the b
 
 ![image](./img/mainWindowDisconnected.png)
 
-Clicking connect should result in the window updating as shown:
+### After Connecting
 ![image](./img/mainWindowConnected.png)
 
-You can now access all the menus available to test and configure the PinOne board. You can also save a backup of the settings changes in case you need to replace your board in the future.
+You can now access all the menus available to test and configure the PinOne board. You can also save a backup of the settings or restore settings to default.
 
 ### Updating Firmware
 

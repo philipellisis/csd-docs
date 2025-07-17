@@ -2,7 +2,13 @@
 sidebar_position: 6
 ---
 
-# Reset configuration to default
+# Reset Config
+
+### Automatic reset
+
+When you first connect to the PinOne board in the config tool, you can click the button on the far right labeled "Restore Configuration to Defaults" After clicking that button, save the config and reset the PinOne but removing power to it. This should bring everything back to the default settings.
+
+### Reset configuration to default Manually
 
 If you would like to reset the PinOne to standard default settings, then place the content of the below in the `PinOneSettings.pinc` file. Then open the config tool, press the `Restore Configuration from PC` button and then press the `Save Config` button. At to ensure all settings are resolved, reset the PinOne by unplugging the USB and plugging it back in again. 
 

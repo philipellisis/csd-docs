@@ -1,0 +1,24 @@
+---
+sidebar_position: 3
+---
+
+# PinOne Expansion Board
+
+![image](./img/PinOneButtonBoard1.jpg)
+
+## Introduction
+
+The expansion board allows you to connect a light bar easily to the PinOne Main or PinOne Mini. It's mainly used for this purpose as it delivers 16 1a PWM outputs, but the only way to connect anything to it is through the header pins.
+
+### Compatibility
+
+The expansion board works with all the PinOne boards
+
+### Models for mounting
+
+If you would like 3d print some models for mounting brackets, one of my customers created some nice designs from them below: 
+ - [Expansion Board](https://makerworld.com/en/models/1705809-cleveland-software-pinone-expansion-board-mount)
+
+### Hooking it all up
+
+There is a good guide on how to connect the expansion board with the light bar [here](../../BuildersKit/connecting-expansion-board)

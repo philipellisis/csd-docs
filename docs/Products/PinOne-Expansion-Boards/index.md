@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # PinOne Expansion Board
 
-![image](./img/PinOneButtonBoard1.jpg)
+![image](./img/buildersKit13.jpg)
 
 ## Introduction
 

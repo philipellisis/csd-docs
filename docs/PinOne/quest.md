@@ -22,6 +22,8 @@ I: Pause
 
 8: Launch Ball
 
+5: Powerup
+
 ![image](./img/metaquest.png)
 
 Special thanks to DR_HVAC for finding this solution. You can find his post and give him an upvote here: https://www.reddit.com/r/virtualpinball/comments/1l20y2z/success_pinball_fx_vr_with_pinone_mini/

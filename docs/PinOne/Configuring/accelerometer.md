@@ -27,11 +27,15 @@ Use the slider to set the dead zone. I've found the dead zone is typically going
 
 ### Recording the Tilt Value
 
-Use the tilt value sliders to set your tilt on the table to a point where you would consider a tilt event occurring. This value is shown with the yellow square on the accelerometer graph. When tilt is activated, it will send an output to the button selected in the "tilt button" dropdown.
+Use the tilt value sliders to set your tilt on the table to a point where you would consider a tilt event occurring. This value is shown with the yellow square on the accelerometer graph. When tilt is activated, it will send an output to the button selected in the "tilt button" dropdowns.
 
 ### Recording the Max Value
 
 Use the max value slider to set the absolute maximums you would expect to receive on the accelerometer. If you want to make the accelerometer less sensitive to movement, this is actually the best item to adjust. You can set this to a much higher number manually and it will restrict the overall sensitivity to accelerometer events sent.
+
+### Setting tilt buttons
+
+You can set a different tilt button for each of the four x/y boundaries. This can be helpful if you want to use keyboard like nudging but still use the accelerometer to send the events. In VPX you might want to set the same button for all four boundaries. You cannot set the button mapping unless the "tilt enabled" checkbox is checked.
 
 ## Setting Tilt in VPX
 

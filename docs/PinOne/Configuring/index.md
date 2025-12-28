@@ -17,7 +17,7 @@ Configuring the PinOne board is designed to be extremely simple. Just plug the b
 ### After Connecting
 ![image](./img/mainWindowConnected.png)
 
-You can now access all the menus available to test and configure the PinOne board. You can also save a backup of the settings or restore settings to default.
+You can now access all the menus available to test and configure the PinOne board. You can also save a backup of the settings or restore settings to default. this screen also allows you to easily set common keyboard bindings for VPX or Meta quest, as well as standard settings for the PinOne Mini Controller. They can be combined to make a complete configuration or just to augment your already existing config. So if you already have the plunger and acceleromter calibrated, clicking the button to set the Meta Quest keyboard bindings will not affect your calibrations, it will only set the keyboard bindings.
 
 ### Updating Firmware
 

@@ -6,6 +6,10 @@ sidebar_position: 2
 
 There are three additional tabs in the settings menu that allow you to adjust the settings for all of the outputs available on the board. The main board has the first 31 outputs that are available on the main board, and the other two tabs are for the optional expansion boards if you have them connected.
 
+## Night Mode indicator
+
+This will show you if you have the night mode enabled or not. When night mode is enabled, no outputs will turn on that are set as "noisy". The button that triggers night mode can be set in the "settings".
+
 ## Max Output Value
 
 This setting configures the absolute maximum output that will be allowed for the output, regardless of what output has been sent to the board. This will override any command given so the output will never go above this amount. This can be great for modifying the speed of a motor, or adjusting the brightness of lights. Sometimes this can also be adjusted in DOF, but it's much more convenient to set it here and just leave DOF to it's default setting.

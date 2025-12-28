@@ -6,9 +6,17 @@ sidebar_position: 2
 
 ![image](./img/buttons.png)
 
-### Shift Button
+## Button Labels
+
+Each button can be relabeled for convenience in case you want to designate each buttons details
+
+## Shift Button
 
 This dropdown selects which button is assigned as the "shift button" when pressing this button, buttons 5-8 will actually trigger 25-28, allowing those 4 buttons to have dual actions.
+
+## Button Mapping
+
+You can assign physical buttons to actuate different virtual buttons using hte button mapping feature. For example if you want the button press on position 1 on the board to actually send an event to button 3, you can make that happen by setting the button mapping on input 1 to 3.
 
 
 ## Steam calibration text

@@ -11,12 +11,12 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.1/pinone-config-tool.2.1.1.exe)
 2. Connect to the PinOne board and navigate to the "Steam Config" screen
 3. Use the dropdowns to assign the correct button to the XBox controller shown on the page.
-4. Once you have setup the controller the way you like, you can click the save button to save the controller configuration into Steam. At this point you are done and can start Steam and the PinOne should be recognized. If it isn't there ready to test, then you likely need to exit Steam and click the button to save the file again.
+4. Once you have setup the controller the way you like, you can click the save button to save the controller configuration into Steam. Steam must be fully shut down in order for this to work, so make sure to exit steam prior to pushing the button. At this point you are done and can start Steam and the PinOne should be recognized. If it isn't there ready to test, then you likely need to exit Steam and click the button to save the file again.
 5. If you would prefer to manually update the calibration in Steam, you can copy the configuration to use inside the Steam calibration menu (shown below)
 
 ![image](./img/steam5.png)
 
-## Configure and calibrate the controller in Steam (currently not working due to a bug in Steam)
+## Configure and calibrate the controller in Steam
 
 1. Go to Steam settings:
 
@@ -31,12 +31,6 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 ```
 030000008f0e00000792000000000000,0x0e8f Clev Soft PinOne,crc:f7d4,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,rightx:a3,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:2,
 ```
-
-:::note
-
-Recently, I have gotten reports of a bug in the Steam controller calibration that does not allow the "paste from clipboard" option to work. In order to bypass this bug, you can manually adjust the "config.vdf" file found in "C:\Program Files (x86)\Steam\config" Instructions for this are in the next section below
-
-:::
 
 ![image](./img/steam3.png)
 

@@ -10,7 +10,10 @@ The [PinOne board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinon
 
 
 ### Download the config tool here
-[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.1/pinone-config-tool.2.1.1.exe)
+[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.2/pinone-config-tool.2.1.2.exe)
+
+On a Mac or Linux? You can always download other releases from here, or see all releases for all platforms [releases](https://github.com/philipellisis/arduino-virtual-pinball-board/releases). Note for Linux or batocera you might have to run in no sandbox mode, and for Mac you will need to bypass security checks to run the app.
+
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

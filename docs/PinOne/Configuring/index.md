@@ -8,9 +8,11 @@ sidebar_position: 4
 
 Note, when upgrading from 1.18, you need to adjust your accelerometer as the new firmware updates the accelerometer to use raw values, which affects scaling
 
-[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.1/pinone-config-tool.2.1.1.exe)
+[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.2/pinone-config-tool.2.1.2.exe)
 
-Configuring the PinOne board is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. The most recent version can always be fetched directly [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.1/pinone-config-tool.2.1.1.exe) Once running, click the `connect` button and you should see all the options appear on the side menu so you can easily test and configure the board.
+On a Mac or Linux? You can always download other releases from here, or see all releases for all platforms [releases](https://github.com/philipellisis/arduino-virtual-pinball-board/releases)
+
+Configuring the PinOne board is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. The most recent version can always be fetched directly [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.2/pinone-config-tool.2.1.2.exe) Once running, click the `connect` button and you should see all the options appear on the side menu so you can easily test and configure the board.
 
 ![image](./img/mainWindowDisconnected.png)
 

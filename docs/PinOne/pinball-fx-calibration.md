@@ -17,3 +17,10 @@ Before you can use the controller in Pinball FX, you first need to configure the
 3. Then just make sure that the alt buttons are set for nudge left and right in Pinball FX (They should be as that is the default behavior)
 
 ![image](./img/fx1.png)
+
+
+### Pinball FX from the Epic Store
+
+To get the proper joystick bindings to work with Pinball FX when purchased diretly from the Epic Store, first follow the steps to get the game controller configured in Steam. Then through Steam you "Add a game" at the bottom left of the library, choose the Epic Store exe.
+
+Then you start the Epic Store through your Steam library and then launch Pinball FX from the Epic Store all your settings from Steam are carried though.

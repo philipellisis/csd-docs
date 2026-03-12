@@ -12,6 +12,14 @@ This allows you to tie up to 4 buttons to an output on the PinOne board. This me
 
 This section allows you to set which button will trigger night mode as well as what type of button you are using. If you are using a toggle button, then night mode will be activated while the button is "on" and disabled when the button is "off" if using a push button, when you push the button once, night mode will be activated, and pushing the button again will disable night mode
 
+### Bluetooth
+
+The Bluetooth toggle enables or disables the PinOne Bluetooth board. Bluetooth must be enabled here before the Bluetooth board will function. If you do not have a Bluetooth board installed, leave this setting disabled.
+
+### DOF Output Testing
+
+The settings page includes a DOF output test section that allows you to manually trigger each output on the PinOne board. This is useful for verifying that your solenoids, contactors, and other feedback devices are wired and functioning correctly without needing to launch a game or have DOFLinx running.
+
 ### Other Settings
 
 This section is used to configure some additional global options on the PinOne board. You can turn on/off the light show attract, which is the pulsing of the lights on and off after a set period of time, which can also be set with the light show start time dropdown. Reversing of the polarity for the button boards should always be turned on to ensure proper operation of the button lights, but can be reversed in case you want to use those outputs for something else.

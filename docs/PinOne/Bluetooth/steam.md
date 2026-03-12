@@ -10,8 +10,8 @@ Before configuring Steam, make sure the Bluetooth board is installed and paired 
 
 ## Setting Up the Controller in Steam
 
-1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.1.2/pinone-config-tool.2.1.2.exe)
-2. Connect to the PinOne board via USB and navigate to the **Steam Config** screen.
+1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.2.0/pinone-config-tool.2.2.0.exe)
+2. Connect to the PinOne board via USB and navigate to the **Controller** screen.
 3. Use the dropdowns to assign the correct buttons to the Xbox controller layout shown on the page.
 4. Once configured, copy the generated configuration string from the config tool.
 

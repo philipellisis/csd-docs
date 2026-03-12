@@ -23,7 +23,7 @@ The Bluetooth board is always available to pair as long as it is not currently c
 1. Power on the PinOne Mini with the Bluetooth board installed.
 2. On your PC, open **Settings → Bluetooth & devices** and ensure Bluetooth is turned on.
 3. Click **Add device → Bluetooth** and wait for the device list to populate.
-4. Select **PinOne** from the list of available devices.
+4. Select **PinOne** (or the custom name you set in the Controller screen) from the list of available devices.
 5. Once paired, the board will show up as a game controller in Windows.
 
 > **Note:** If the PinOne does not appear in your device list, make sure it is not currently paired to another device such as a Meta Quest headset. You will need to disconnect it from that device first before it can be discovered here.

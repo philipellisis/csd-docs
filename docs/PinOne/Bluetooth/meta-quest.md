@@ -50,7 +50,7 @@ VR Classic mode in Pinball FX uses standard gamepad inputs rather than keyboard 
 
 ### Configuring Gamepad Mode
 
-Configuring the gamepad inputs for VR Classic is done the same way as the Steam configuration. Connect the PinOne to your PC via USB, open the PinOne Configuration Tool, and navigate to the **Steam Config** screen. Use the dropdowns to assign each physical button to the corresponding Xbox controller input. Once you are happy with the mapping, click the **Save** button — this writes the button mappings directly to the Bluetooth device, so the correct gamepad inputs are sent to the Meta Quest when you play in VR Classic mode.
+Configuring the gamepad inputs for VR Classic is done the same way as the Steam configuration. Connect the PinOne to your PC via USB, open the PinOne Configuration Tool, and navigate to the **Controller** screen. Use the dropdowns to assign each physical button to the corresponding Xbox controller input. Once you are happy with the mapping, click the **Save** button — this writes the button mappings directly to the Bluetooth device, so the correct gamepad inputs are sent to the Meta Quest when you play in VR Classic mode.
 
 ### Gamepad Button Mapping for VR Classic
 

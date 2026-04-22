@@ -38,6 +38,20 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 
 ![image](./img/steam4.png)
 
+5. For better motion detection, it is recommended to reduce the joystick deadzone to its minimum value. To do this, click the **Open** button next to "Calibration & Advanced Settings" on the controller page.
+
+![image](./img/steam6.png)
+
+6. In the Calibration & Advanced Settings screen, select **Joysticks** and drag the **Left Joystick Deadzone** and **Right Joystick Deadzone** sliders all the way to the left (minimum). This gives the accelerometer the full range of motion it needs for accurate nudge detection.
+
+![image](./img/steam7.png)
+
+## Enable Steam Input for games
+
+Some games like Pinball FX require Steam Input to be enabled before the PinOne will be recognized as a controller. To enable it, open the game's controller settings in Steam and click the **Enable Steam Input** button.
+
+![image](./img/steam8.png)
+
 ## Manually update the controller configuration
 
 In case pasting the data into Steam does not work, you can easily add the controller configuration to the Steam config file. Simply open the config file "C:\Program Files (x86)\Steam\config\config.vdf" in any text editor and add the configuration in the "SDL_GamepadBind" section. Once you have added the configuration for the controller, it will look like the text below:

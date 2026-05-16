@@ -35,3 +35,11 @@ Copy: L=0.5*L+0.5*C R=0.5*R+0.5*C
 ```
 
 You can adjust the 0.5 to a higher number if you need more sound going to the speakers.
+
+### Only getting backglass sound in VPX tables
+
+If SSF sound is only working on certain tables (e.g. Batman '66) but all other tables only produce sound through the backglass speakers, try setting the **Backglass specific Sound Device** to **Primary Sound Driver** in Visual Pinball X:
+
+1. Open Visual Pinball X
+2. Go to **Preferences > Audio Options**
+3. Set **Backglass specific Sound Device** to **Primary Sound Driver**

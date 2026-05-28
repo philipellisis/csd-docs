@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 const { create } = require('xmlbuilder2');
 import styles from './cabinet.module.css';
 
 export default function CabinetXml() {
+    const fileInputRef = useRef(null);
     const [numControllers, setNumControllers] = useState(1);
     const [controllers, setControllers] = useState([{ name: 'WemosD1MPStripController', numToys: 3, comPort: 1, dtrEnable: true}]);
     const [toys, setToys] = useState([
@@ -136,6 +137,16 @@ export default function CabinetXml() {
         setToys(newToys);
     };
 
+    const saveXML = () => {
+        const blob = new Blob([generateXML()], { type: 'application/xml' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Cabinet.xml';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
     const copyToClipboard = async () => {
         try {
             await navigator.clipboard.writeText(generateXML());
@@ -143,6 +154,170 @@ export default function CabinetXml() {
         } catch (err) {
             console.error('Failed to copy:', err);
         }
+    };
+
+    const importXML = (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            try {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(e.target.result, 'text/xml');
+                parseAndSetState(xmlDoc);
+            } catch (err) {
+                console.error('Failed to parse XML:', err);
+                alert('Failed to parse XML file. Please check the file format.');
+            }
+        };
+        reader.readAsText(file);
+        // Reset so the same file can be re-imported
+        event.target.value = '';
+    };
+
+    const parseAndSetState = (xmlDoc) => {
+        const outputControllersEl = xmlDoc.querySelector('OutputControllers');
+        const toysEl = xmlDoc.querySelector('Toys');
+        if (!outputControllersEl || !toysEl) {
+            alert('Invalid Cabinet XML file.');
+            return;
+        }
+
+        // Parse all LedStrip entries keyed by name (first occurrence wins)
+        const ledStripMap = {};
+        Array.from(toysEl.children).forEach(el => {
+            if (el.tagName === 'LedStrip') {
+                const name = el.querySelector('Name')?.textContent?.trim() || '';
+                if (name && !ledStripMap[name]) {
+                    ledStripMap[name] = {
+                        width: el.querySelector('Width')?.textContent?.trim() || '1',
+                        height: el.querySelector('Height')?.textContent?.trim() || '1',
+                        ledStripArrangement: el.querySelector('LedStripArrangement')?.textContent?.trim() || '',
+                        firstLedNumber: parseInt(el.querySelector('FirstLedNumber')?.textContent?.trim() || '1', 10),
+                        outputControllerName: el.querySelector('OutputControllerName')?.textContent?.trim() || '',
+                    };
+                }
+            }
+        });
+
+        const lweEls = Array.from(toysEl.children).filter(el => el.tagName === 'LedWizEquivalent');
+        const controllerEls = Array.from(outputControllersEl.children);
+        const newControllers = [];
+        const newToys = [];
+
+        controllerEls.forEach((controllerEl, controllerIndex) => {
+            const controllerName = controllerEl.tagName;
+            const comPortText = controllerEl.querySelector('ComPortName')?.textContent?.trim() || 'COM1';
+            const comPort = parseInt(comPortText.replace('COM', ''), 10) || 1;
+            const dtrEnable = controllerEl.querySelector('ComPortDtrEnable')?.textContent?.trim() === 'true';
+            const controllerInternalName = controllerEl.querySelector('Name')?.textContent?.trim() || '';
+
+            // Parse NumberOfLedsStrip{N} → outputLeds map
+            const outputLeds = {};
+            Array.from(controllerEl.children).forEach(child => {
+                const match = child.tagName.match(/^NumberOfLedsStrip(\d+)$/);
+                if (match) {
+                    outputLeds[parseInt(match[1], 10)] = parseInt(child.textContent.trim(), 10);
+                }
+            });
+
+            const sortedOutputNums = Object.keys(outputLeds).map(Number).sort((a, b) => a - b);
+
+            // Build cumulative start LED position for each output
+            const outputStarts = {};
+            let cum = 1;
+            sortedOutputNums.forEach(n => { outputStarts[n] = cum; cum += outputLeds[n]; });
+
+            // Filter LedStrip entries belonging to this controller
+            const myStrips = {};
+            Object.entries(ledStripMap).forEach(([name, props]) => {
+                if (props.outputControllerName === controllerInternalName) {
+                    myStrips[name] = props;
+                }
+            });
+
+            // Determine which physical output each unique strip is on via firstLedNumber
+            const nameToOutputNum = {};
+            Object.entries(myStrips).forEach(([name, strip]) => {
+                for (const outputNum of sortedOutputNums) {
+                    const start = outputStarts[outputNum];
+                    const end = start + outputLeds[outputNum] - 1;
+                    if (strip.firstLedNumber >= start && strip.firstLedNumber <= end) {
+                        nameToOutputNum[name] = outputNum;
+                        break;
+                    }
+                }
+            });
+
+            // For outputs with multiple unique strips, calculate each strip's LED count
+            // from the difference between consecutive firstLedNumbers
+            const toyLedCountMap = {};
+            const stripsPerOutput = {};
+            Object.entries(myStrips).forEach(([name, strip]) => {
+                const outputNum = nameToOutputNum[name];
+                if (outputNum !== undefined) {
+                    if (!stripsPerOutput[outputNum]) stripsPerOutput[outputNum] = [];
+                    stripsPerOutput[outputNum].push({ name, firstLedNumber: strip.firstLedNumber });
+                }
+            });
+            Object.entries(stripsPerOutput).forEach(([outputNumStr, strips]) => {
+                const outputNum = parseInt(outputNumStr, 10);
+                if (strips.length === 1) {
+                    toyLedCountMap[strips[0].name] = outputLeds[outputNum];
+                } else {
+                    strips.sort((a, b) => a.firstLedNumber - b.firstLedNumber);
+                    strips.forEach((strip, i) => {
+                        toyLedCountMap[strip.name] = i < strips.length - 1
+                            ? strips[i + 1].firstLedNumber - strip.firstLedNumber
+                            : outputStarts[outputNum] + outputLeds[outputNum] - strip.firstLedNumber;
+                    });
+                }
+            });
+
+            // Get ordered toy names from the matching LedWizEquivalent
+            const lweEl = lweEls[controllerIndex];
+            const toyNames = lweEl
+                ? Array.from(lweEl.querySelectorAll('LedWizEquivalentOutput'))
+                    .map(el => el.querySelector('OutputName')?.textContent?.trim() || '')
+                    .filter(Boolean)
+                : [];
+
+            // Assign output numbers to each toy, advancing through sortedOutputNums for duplicates
+            const nameOutputIdx = {};
+            const controllerToys = toyNames.map(name => {
+                let outputNum;
+                if (nameOutputIdx[name] === undefined) {
+                    outputNum = nameToOutputNum[name] || sortedOutputNums[0] || 1;
+                    nameOutputIdx[name] = sortedOutputNums.indexOf(outputNum);
+                } else {
+                    nameOutputIdx[name] += 1;
+                    outputNum = nameOutputIdx[name] < sortedOutputNums.length
+                        ? sortedOutputNums[nameOutputIdx[name]]
+                        : sortedOutputNums[sortedOutputNums.length - 1] + (nameOutputIdx[name] - sortedOutputNums.length + 1);
+                }
+
+                const strip = myStrips[name] || {};
+                const numberOfLeds = toyLedCountMap[name] !== undefined
+                    ? toyLedCountMap[name]
+                    : (outputLeds[outputNum] || 0);
+
+                return {
+                    name,
+                    numberOfLeds: String(numberOfLeds),
+                    width: strip.width || '1',
+                    height: strip.height || '1',
+                    ledStripArrangement: strip.ledStripArrangement || '',
+                    outputNumber: Math.min(outputNum, 10),
+                };
+            });
+
+            newControllers.push({ name: controllerName, comPort, dtrEnable, numToys: controllerToys.length });
+            newToys.push(controllerToys);
+        });
+
+        setControllers(newControllers);
+        setToys(newToys);
+        setNumControllers(newControllers.length);
     };
 
     const generateXML = () => {
@@ -262,6 +437,11 @@ export default function CabinetXml() {
     return (
         <div>
             <div className={styles.container}>
+                <div style={{ marginBottom: '16px' }}>
+                    <input ref={fileInputRef} type="file" accept=".xml" onChange={importXML} style={{ display: 'none' }} />
+                    <button className={styles.Button} onClick={() => fileInputRef.current.click()}>Import Cabinet.xml</button>
+                    <button className={styles.Button} onClick={saveXML}>Save Cabinet.xml</button>
+                </div>
                 Press buttons below to set pre-configured cabinet files (All configurations include L/R side strip LEDs)
                 <div>
                     < button className={styles.Button} onClick={handleSingleMatrixToyChange}>Single Matrix Config</button>
@@ -271,7 +451,6 @@ export default function CabinetXml() {
                     < button className={styles.Button} onClick={handle7MatrixToyChange}>7 Matrix Config</button>
                     < button className={styles.Button} onClick={handle8MatrixToyChange}>8 Matrix Config</button>
                 </div>
-
             </div>
 
             <div className={styles.container}>

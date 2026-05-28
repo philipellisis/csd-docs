@@ -176,6 +176,7 @@ export default function CabinetXml() {
     };
 
     const parseAndSetState = (xmlDoc) => {
+        try {
         const outputControllersEl = xmlDoc.querySelector('OutputControllers');
         const toysEl = xmlDoc.querySelector('Toys');
         if (!outputControllersEl || !toysEl) {
@@ -318,6 +319,10 @@ export default function CabinetXml() {
         setControllers(newControllers);
         setToys(newToys);
         setNumControllers(newControllers.length);
+        } catch (err) {
+            console.error('Failed to parse Cabinet XML:', err);
+            alert('Failed to parse XML file: ' + err.message);
+        }
     };
 
     const generateXML = () => {
@@ -335,7 +340,7 @@ export default function CabinetXml() {
 
             // Group toys by outputNumber and sum their LED counts
             const outputLedCounts = {};
-            toys[index].forEach((toy, toyIndex) => {
+            (toys[index] || []).forEach((toy, toyIndex) => {
                 if (toy && toy.name && toy.numberOfLeds) {
                     const outputNum = toy.outputNumber !== undefined ? toy.outputNumber : Math.min(toyIndex + 1, 10);
                     outputLedCounts[outputNum] = (outputLedCounts[outputNum] || 0) + parseInt(toy.numberOfLeds, 10);
@@ -373,7 +378,7 @@ export default function CabinetXml() {
         controllers.forEach((controller, controllerIndex) => {
             // Build output groups ordered by outputNumber to calculate FirstLedNumber
             const outputGroups = {};
-            toys[controllerIndex].forEach((toy, idx) => {
+            (toys[controllerIndex] || []).forEach((toy, idx) => {
                 const outputNum = toy.outputNumber !== undefined ? toy.outputNumber : Math.min(idx + 1, 10);
                 if (!outputGroups[outputNum]) outputGroups[outputNum] = [];
                 outputGroups[outputNum].push({ toy, idx });
@@ -389,8 +394,8 @@ export default function CabinetXml() {
                 });
             });
 
-            toys[controllerIndex].forEach((toy, index) => {
-                const isFirstOccurrence = !toys[controllerIndex].some((t, i) => t.name === toy.name && i < index);
+            (toys[controllerIndex] || []).forEach((toy, index) => {
+                const isFirstOccurrence = !(toys[controllerIndex] || []).some((t, i) => t.name === toy.name && i < index);
                 if (toy && toy.name && isFirstOccurrence) {
                     const ledStrip = toysElement.ele('LedStrip');
                     ledStrip.ele('Name').txt(toy.name).up();
@@ -411,7 +416,7 @@ export default function CabinetXml() {
             LedWizEquivalent.ele('LedWizNumber').txt('3' + controllerIndex).up();
             const outputs = LedWizEquivalent.ele('Outputs');
             let toyIndex = 0;
-            toys[controllerIndex].forEach((toy) => {
+            (toys[controllerIndex] || []).forEach((toy) => {
                 if (toy && toy.name) {
                     const equivalent = outputs.ele('LedWizEquivalentOutput');
                     equivalent.ele('OutputName').txt(toy.name).up();

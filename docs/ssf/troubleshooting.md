@@ -6,6 +6,10 @@ sidebar_position: 4
 
 ### No backbox sound in some VPX games
 
+First thing to check is that you have this setting adjusted properly in VPX:
+during game play, press F1 and check the box that says 'extend mono to stereo' save, quit game, reload it. Also verify the rom sounds are up (pressing 8 , 9 ) or coin door then 8 , 9
+
+
 I have found that sometimes depending on the soundcard or driver, that all the sound is sent to the center channel speaker (but there isn't a center channel speaker in SSF!) The fix for this issue is quite simple -- just download and install [equalizer apo](https://equalizerapo.com/) 
 
 This also gives you the ability to adjust the sound level of SSF sounds vs backbox sounds, which I've found to be out of balance in most cases as the SSF sounds are usually lower than the backbox sounds. One of the easiest ways to do this is simply edit the `C:\Program Files\EqualizerAPO\config\config.txt` as follows:
@@ -43,3 +47,5 @@ If SSF sound is only working on certain tables (e.g. Batman '66) but all other t
 1. Open Visual Pinball X
 2. Go to **Preferences > Audio Options**
 3. Set **Backglass specific Sound Device** to **Primary Sound Driver**
+
+

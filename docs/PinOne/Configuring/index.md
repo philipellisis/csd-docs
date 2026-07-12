@@ -10,7 +10,7 @@ Note, when upgrading from 1.18, you need to adjust your accelerometer as the new
 
 [![Get the config tool](./img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.2.1/pinone-config-tool.2.2.1.exe)
 
-On a Mac or Linux? You can always download other releases from here, or see all releases for all platforms [releases](https://github.com/philipellisis/arduino-virtual-pinball-board/releases)
+On a Mac or Linux? You can always download other releases from here, or see all releases for all platforms [releases](https://github.com/philipellisis/arduino-virtual-pinball-board/releases). Mac users should also see the [Mac Setup](./mac-setup.md) guide, and Linux users should see the [Linux Setup](./linux-setup.md) guide for a required connection workaround.
 
 Configuring the PinOne board is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. The most recent version can always be fetched directly [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.2.1/pinone-config-tool.2.2.1.exe) Once running, click the `connect` button and you should see all the options appear on the side menu so you can easily test and configure the board.
 

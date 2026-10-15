@@ -34,6 +34,18 @@ Then modify the config so that all the combo outputs go directly to the 2 output
 
 ![image](./img/DOF-config-6.png)
 
+### PinOne (VR Builders Kit) (four solenoid) Config File
+
+For the VR kit, if you only have 4 solenoids connected to it, then you will have a slightly different configuration file. The main difference is you want to share toys to ensure that you have solenoid feedback for the flippers and slings and pop bumpers. To do this, simply navigate to the "Combine Toys" section in the config tool and enter two new combos like the following:
+
+![image](./img/DOF-config-5.png)
+
+If you would prefer DOF control the flippers, then you can also set the flippers in DOF and remove the button binding in the PinOne config tool.
+
+Then modify the config so that all the combo outputs go directly to the 2 outputs with solenoids attached to them.
+
+![image](./img/DOF-config10.png)
+
 ### Addressable LED Config File
 
 For addressable LEDs, just select each output based on the type of LED strip you have configured in the Cabinet.xml file. In the case below, I have my cabinet setup in the most used configuration, a right LED strip, a left LED strip and then a back LED matrix. If you have more, then just add additional outputs. You can use the [cabinet generator](../AddressableLED/cabinetGenerator) to generate the cabinet file that should match what you have set in DOF for outputs.

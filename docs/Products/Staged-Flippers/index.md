@@ -18,3 +18,13 @@ This is a true leaf switch button with an RGB light built into it! You can even 
 
 3. change the settings by modding the vpx table code. Addams Family has a simple true false setup for stages flippers. It’s a good test table.
 ![image](./img/staged_flippers_3.jpg)
+
+## Drilling holes in cabinets with pre-drilled smaller holes
+
+Many thanks to Chris Crawford for designing these templates to make drilling out larger holes for CSD buttons super easy. 
+
+For the flipper and magna save holes you will need a 28mm hole saw and the smaller pilot. The hole saw can can be found here:
+https://www.amazon.com/dp/B07VCHLVMW
+
+And the pilot drawing for 3d print can be found here:
+[Spacer STL](./img/CSD_Hole_Saw_Spacer_Flippers.stl)

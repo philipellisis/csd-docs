@@ -6,6 +6,10 @@ sidebar_position: 4
 
 If you are having a problem where the PinOne is not being recognized properly in windows USB Game controllers, use the following steps to get it back to working order. This can happen when you upgrade the PinOne from the older game controller drivers to the newer ones.
 
+:::tip
+If the gamepad or keyboard buttons are not working as expected, try [Resetting USB Devices in Windows](./usb-reset.md) first — it often resolves the issue without needing to edit the registry.
+:::
+
 1. Unplug the PinOne from the computer USB
 2. Go to Computer\HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput and delete the following options (if they exist):
 

@@ -1,0 +1,54 @@
+---
+sidebar_position: 1.2
+---
+
+# Steam Calibration
+
+To use the PinOne controller with Steam, all you need to do is create a Steam controller mapping and click the save button to update your Steam VDF file or set it up as a generic controller and paste the configuration into the Steam calibration screen. To do this, follow these steps:
+
+## Create your Steam Game controller configuration using the PinOne Configuration tool Input screen:
+
+1. Download the config tool from [here](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool.3.0.0.exe) (Windows) or the [releases page](https://github.com/philipellisis/PinOne/releases/tag/v3.0.0)
+2. Connect to the PinOne board and navigate to the "Controller" screen (see [Controller](./Configuring/steam))
+3. Use the dropdowns to assign the correct button to the XBox controller shown on the page. If you also use Bluetooth, copy the "Bluetooth LE" entry instead of, or as well as, the "USB" entry.
+4. Once you have setup the controller the way you like, you can click the save button to save the controller configuration into Steam. Steam must be fully shut down in order for this to work, so make sure to exit steam prior to pushing the button. At this point you are done and can start Steam and the PinOne should be recognized. If it isn't there ready to test, then you likely need to exit Steam and click the button to save the file again.
+5. If you would prefer to manually update the calibration in Steam, you can copy the configuration to use inside the Steam calibration menu (shown below)
+
+![image](./img/steam5.png)
+
+## Configure and calibrate the controller in Steam
+
+1. Go to Steam settings:
+
+![image](./img/steam1.png)
+
+2. Select Controller, enable generic controllers, and click "begin setup". If the controller is already setup, you can click "begin test" then "reset device settings" to start over again.
+
+![image](./img/steam2.png)
+
+3. In the controller setup, you can use the values found with the config tool to paste into the screen, or if you want to use a pre-configured 9 button setup, you can simply paste the command below:
+
+```
+030000008f0e00000792000000000000,0x0e8f Clev Soft PinOne,crc:f7d4,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,rightx:a3,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:2,
+```
+
+![image](./img/steam3.png)
+
+4. Once the configuration above is loaded into Steam, you can set the controller as shown below and all the keys should work.
+
+![image](./img/steam4.png)
+
+## Manually update the controller configuration
+
+In case pasting the data into Steam does not work, you can easily add the controller configuration to the Steam config file. Simply open the config file "C:\Program Files (x86)\Steam\config\config.vdf" in any text editor and add the configuration in the "SDL_GamepadBind" section. Once you have added the configuration for the controller, it will look like the text below:
+
+```
+	"SDL_GamepadBind"		"03000000de280000ff11000001000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
+03000000de280000ff11000000000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
+03000000de280000ff11000000007701,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:b12,dpleft:b13,dpright:b11,dpup:b10,leftshoulder:b4,leftstick:b8,lefttrigger:a4,leftx:a1,lefty:a0~,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a2~,start:b7,x:b2,y:b3,platform:Windows,
+030000008f0e00000792000000000000,0x0e8f Clev Soft PinOne,crc:f7d4,platform:Windows,a:b5,b:b7,x:b6,y:b4,dpleft:b24,dpright:b25,dpup:b26,dpdown:b27,leftx:a0,lefty:a1,rightx:a3,righty:a2,leftshoulder:b2,lefttrigger:b3,rightshoulder:b0,righttrigger:b1,back:b28,start:b8,steam:2,"
+	"Authentication"
+	{
+```
+
+The line with the "Clev Soft PinOne" in it is the one you need to add. Make sure to check the quotes to ensure they are in the right place.

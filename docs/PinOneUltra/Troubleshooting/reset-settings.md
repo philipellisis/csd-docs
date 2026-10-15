@@ -14,7 +14,3 @@ sidebar_position: 6
 ### Restore a previous configuration
 
 If you have saved a backup using `Backup Configuration to PC`, you can put it back with `Restore Configuration from PC` and then `Save Config`. It is a good idea to take a backup once you are happy with your setup.
-
-### Reset the Windows game controller entries
-
-If the settings are fine but Windows or a game is showing the wrong controller layout or names, use the `Reset USB Device (Windows)` card on the home page, as described in [Windows USB Game controllers](./game-controller).

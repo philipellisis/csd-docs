@@ -16,7 +16,7 @@ First check that your game controller is properly responding in windows USB game
 
 ![USB Game Controllers](./img/popper2.png)
 
-Ensure that the controller is responding to button presses, plunger movement etc. If not, then follow these steps to fix the game controller: [windows game settings](game-controller)
+Ensure that the controller is responding to button presses, plunger movement etc. If not, then follow these steps to fix the game controller: [windows game settings](reset-settings)
 
 If the controller is operating fine there, then check for any buttons being permanently pushed down. Button 23 being pushed down is usually the tilt button. If this is the case, then check your accelerometer settings, ensuring they are set properly: [Accelerometer Calibration](../Configuring/accelerometer)
 

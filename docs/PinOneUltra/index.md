@@ -14,9 +14,9 @@ More details about the features, and a comparison with the original PinOne, can 
 
 The PinOne Ultra uses a newer version of the PinOne Config Tool than the original PinOne.
 
-[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool.3.0.0.exe)
+[![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe)
 
-On another platform? Download the [macOS (Intel)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0.dmg), [macOS (Apple Silicon)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0-arm64.dmg) or [Linux AppImage](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0.AppImage) build, or see all files on the [releases page](https://github.com/philipellisis/PinOne/releases/tag/v3.0.0). Note for Linux or Batocera you might have to run in no sandbox mode.
+On another platform? Download the [macOS (Intel)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-x64.dmg), [macOS (Apple Silicon)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-arm64.dmg) or [Linux AppImage](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.AppImage) build, or see all files on the [releases page](https://github.com/philipellisis/PinOne/releases/latest). Note for Linux or Batocera you might have to run in no sandbox mode.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

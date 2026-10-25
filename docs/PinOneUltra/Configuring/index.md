@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ### Download the config tool
 
-[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool.3.0.0.exe)
+[![Get the config tool](./img/button.svg)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe)
 
-On another platform? Download the [macOS (Intel)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0.dmg), [macOS (Apple Silicon)](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0-arm64.dmg) or [Linux AppImage](https://github.com/philipellisis/PinOne/releases/download/v3.0.0/pinone-config-tool-3.0.0.AppImage) build, or see all files on the [releases page](https://github.com/philipellisis/PinOne/releases/tag/v3.0.0).
+On another platform? Download the [macOS (Intel)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-x64.dmg), [macOS (Apple Silicon)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-arm64.dmg) or [Linux AppImage](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.AppImage) build, or see all files on the [releases page](https://github.com/philipellisis/PinOne/releases/latest).
 
 Configuring the PinOne Ultra is designed to be extremely simple. Just plug the board into your PC via a USB connection and run the configuration utility. Once running, click the `Connect` button in the header and you should see all the options appear in the side menu so you can easily test and configure the board.
 

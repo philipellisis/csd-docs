@@ -49,6 +49,7 @@ sidebar_position: 1
 - **Button lock**: lock out all buttons except a short allowed list to prevent accidental presses. See [Inputs](./Configuring/inputs#button-lock)
 - **Velocity nudge**: optional velocity output on the Rx/Ry axes for simulators that support velocity based nudge. See [Accelerometer](./Configuring/accelerometer#velocity-output)
 - Accelerometer dead zone, tilt and max values can be captured automatically with the record buttons
+- **Soft limit**: optionally compress hard nudges so a big whack can't send the ball flying. See [Accelerometer](./Configuring/accelerometer#soft-limit)
 - Accelerometer can press a different button for each of the four nudge directions, effectively simulating a tilt bob via software
 - Accelerometer orientation can be set in 5 degree increments with a live preview of how the board is mounted
 - Plunger can press a button when pushed in to a certain level and also when extended to a certain level, allowing the plunger to be used normally to activate the fire button

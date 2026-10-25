@@ -47,6 +47,20 @@ When **Tilt Enabled** is switched on, you can choose a different button for each
 
 **Tilt Suppression** is how long tilt is ignored after the first tilt event, so the tilt button is not sent many times in a row. It is recommended to keep this above 200ms.
 
+## Soft Limit
+
+A real cabinet nudge is over in a fraction of a second, but an accelerometer reports a hard whack as a very large spike. Sent straight to the simulator, that can make the ball fly around far more than it would on a real table. The **soft limit** tames this: small and medium nudges are left alone, while harder hits are compressed, so it takes increasingly hard hits to push the ball further.
+
+Turn on **Enable Soft Limit** to use it. It applies to the X/Y nudge axes, the tilt buttons and the velocity output.
+
+| Setting | Description |
+|---|---|
+| Soft Limit Knee | Where the compression starts, as a percentage of the Max value. Readings below the knee are sent unchanged. Above the knee the output flattens out and gets close to, but never reaches, the Max value. A lower knee limits the nudge earlier and more strongly. A higher knee leaves more of the range untouched. |
+
+On the graph, the black crosshair is the raw reading from the accelerometer and the green crosshair is the value after the soft limit, which is what the board sends. The dashed green square is the knee. The two crosshairs sit on top of each other until a nudge goes past the knee. Both crosshairs and the X/Y Limited numbers update live as you change the setting, before you save.
+
+The record buttons (Record Max, Record Tilt and Record Dead Zone) always use the raw reading, so the values they capture are not affected by the soft limit. Set the Max with **Record Max** first, because the knee is a percentage of it.
+
 ## Velocity Output
 
 Some simulators, such as Visual Pinball with the "Analog Nudge Input is Velocity" option, work better with a nudge velocity than with raw acceleration. When **Enable Velocity Output (Rx/Ry)** is on, the PinOne Ultra additionally reports the calculated velocity of the cabinet on the Rx and Ry gamepad axes. The normal X/Y acceleration is still sent as before.
@@ -55,7 +69,7 @@ Only turn this on if your simulator supports velocity based nudge input and is c
 
 | Setting | Description |
 |---|---|
-| Velocity Decay Time | How long the velocity takes to decay to half its value when there is no new motion. Lower values recenter faster but may clip large slow nudges. Higher values feel smoother but drift more. |
+| Velocity Decay Time | How long the velocity takes to decay to half its value when there is no new motion, from 10 to 500 ms (default 100 ms). Lower values recenter faster but may clip large slow nudges. Higher values feel smoother but drift more. A good starting point is about the length of a real nudge, roughly 50 to 150 ms. |
 | Velocity Scale | Scaling factor applied to the velocity before it is sent. Higher values make the output more sensitive. |
 
 While velocity output is turned on, two bars show a live preview of the Rx and Ry output for the current decay time and scale, so you can tune the values without saving. The preview is calculated in the tool from live acceleration, so it is close to, but not exactly, what the board sends.

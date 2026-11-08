@@ -51,7 +51,7 @@ When **Tilt Enabled** is switched on, you can choose a different button for each
 
 A real cabinet nudge is over in a fraction of a second, but an accelerometer reports a hard whack as a very large spike. Sent straight to the simulator, that can make the ball fly around far more than it would on a real table. The **soft limit** tames this: small and medium nudges are left alone, while harder hits are compressed, so it takes increasingly hard hits to push the ball further.
 
-Turn on **Enable Soft Limit** to use it. It applies to the X/Y nudge axes, the tilt buttons and the velocity output.
+Turn on **Enable Soft Limit** to use it. It applies to the X/Y nudge axes and the tilt buttons. The velocity output is not soft limited: it always uses the full acceleration, so a harder nudge always gives a stronger velocity.
 
 | Setting | Description |
 |---|---|
@@ -69,10 +69,59 @@ Only turn this on if your simulator supports velocity based nudge input and is c
 
 | Setting | Description |
 |---|---|
-| Velocity Decay Time | How long the velocity takes to decay to half its value when there is no new motion, from 10 to 500 ms (default 100 ms). Lower values recenter faster but may clip large slow nudges. Higher values feel smoother but drift more. A good starting point is about the length of a real nudge, roughly 50 to 150 ms. |
-| Velocity Scale | Scaling factor applied to the velocity before it is sent. Higher values make the output more sensitive. |
+| Velocity Decay Time | How long the velocity takes to decay to half its value when there is no new motion, from 10 to 500 ms (default 100 ms). Lower values recenter faster but may clip large slow nudges. Higher values feel smoother but drift more. The default of 100 ms works well, and there is rarely a reason to change it. |
+| Velocity Scale | Axis units sent per mm/s of cabinet movement (default 160). This sets the units of the output, not how strong the nudge feels. Leave it at 160 and set the nudge strength in VPX instead (see below). Raising it makes the output max out at a lower speed, so every firm nudge ends up feeling the same. |
 
 While velocity output is turned on, two bars show a live preview of the Rx and Ry output for the current decay time and scale, so you can tune the values without saving. The preview is calculated in the tool from live acceleration, so it is close to, but not exactly, what the board sends.
+
+Below the bars, the tool shows the values to enter in VPX for the current Velocity Scale:
+
+- **VPX 10.8.0 X-Gain / Y-Gain**: the gain that gives a real-world nudge strength in VPX 10.8.0.
+- **VPX 10.8.1+ velocity sensor Unit scale**: the unit scale to use in VPX 10.8.1 and newer.
+- **Output clips at**: the cabinet speed at which the output maxes out. Keep this above about 100 mm/s; at the default scale of 160 it is 205 mm/s.
+
+## Setting up Velocity Nudge in VPX
+
+How VPX reads the velocity depends on the version you are running. VPX 10.8.0 uses the **Keys, Nudge and DOF** dialog. VPX 10.8.1 and newer (which will become 10.9) set up nudge from the in-game settings menu instead. Follow the section for your version.
+
+Before you start, turn on **Enable Velocity Output (Rx/Ry)** in the config tool, leave **Velocity Scale** at 160 and **Velocity Decay Time** at 100 ms, and click `Save Config`.
+
+### VPX 10.8.0
+
+In 10.8.0, the gain setting decides how much a given cabinet speed moves the ball. At 100% gain the whole axis only covers a very small speed range, so the gain has to be much higher than 100% for a velocity input. If the gain is left at 100%, nudges will barely register.
+
+1. Open **Preferences > Configure Keys, Nudge and DOF**.
+2. Under **Nudge, Plumb, Plunger > Axis Assignments**:
+   - Set **X Axis (L/R)** to **rX Axis**.
+   - Set **Y Axis (U/D)** to **rY Axis**.
+   - Set **X-Max** and **Y-Max** to **100**.
+   - Set **X-Gain** and **Y-Gain** to the value shown in the config tool. At the default Velocity Scale of 160 this is **1518**. The box accepts values over 100.
+   - Set **Dead Zone** to **0**. The PinOne already applies its own dead zone.
+3. Turn on **Enable Analog Nudge** and **Analog Nudge Input is Velocity**.
+4. Click **OK**.
+
+To adjust the strength, change **X-Gain** and **Y-Gain**: lower for gentler nudges, higher for stronger ones. Don't change the Velocity Scale in the config tool for this. If a nudge moves the ball the wrong way, tick **Reverse** for that axis.
+
+The **Nudge Test and Calibration.vpx** table that comes with VPX is a good way to check the result.
+
+### VPX 10.8.1 and newer
+
+From 10.8.1, VPX expects the velocity in real units (m/s), and you set the strength separately.
+
+1. Start a table and open the in-game settings menu, then go to **Nudge Settings**.
+2. Under **Hardware sensor based nudge**, choose **Add a new nudge sensor**.
+3. Set **Nudge Sensor Type**:
+   - **Intent Sensor** turns each nudge into a clean push on the ball and ignores small cabinet wobble. This is a good starting point.
+   - **Cabinet Sensor** passes the cabinet movement straight to the ball, which is more realistic. If you use it, set **Cabinet Weight** to the weight of your cabinet in kg.
+4. Under **Side velocity sensor**:
+   - Set **Hardware Sensor** to the PinOne's **Rx** axis.
+   - Set **Sensor Type** to **Velocity**.
+   - Set **Sensor unit** to **0.2048 m/s [Pinscape nudge velocity]**. This matches the PinOne exactly at the default Velocity Scale of 160. If you use a different scale, choose **Custom unit** and enter the **Unit scale** shown in the config tool.
+5. Under **Front velocity sensor**, do the same with the PinOne's **Ry** axis.
+6. Leave the **Side acceleration sensor** and **Front acceleration sensor** unmapped.
+7. Start with **Nudge Strength** at **100%**.
+
+To adjust the strength, change **Nudge Strength**, not the Velocity Scale in the config tool. If a nudge moves the ball the wrong way, turn on **Reversed axis** for that sensor. With **Intent Sensor**, a front nudge (pushing the cabinet away from you) needs to read as negative on the front axis, or VPX will ignore it. If front nudges do nothing, try turning on **Reversed axis** for the front sensor.
 
 ## Setting Tilt in VPX
 

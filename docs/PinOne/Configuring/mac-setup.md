@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Mac Setup
 
-macOS blocks the Config Tool by default because it is quarantined as a downloaded app. Removing the quarantine flag is all that's needed to get it running.
+macOS blocks the Config Tool by default because it is quarantined as a downloaded app. Removing the quarantine flag is all that's needed to get it running. You might also need to run VPX with SDL_JOYSTICK_MFI=0 for the accelerometer and plunger to properly work.
 
 ### Step 1 - Install the app
 

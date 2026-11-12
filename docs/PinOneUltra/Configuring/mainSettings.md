@@ -28,7 +28,7 @@ This section is used to configure some additional global options on the PinOne b
 | Accelerometer Enabled | Completely turns the accelerometer off. When off, the accelerometer page is hidden. |
 | Plunger Enabled | Completely turns the plunger off. When off, the plunger page is hidden. |
 | Disable USB Suspend | When on, the PinOne keeps running normally even if the computer suspends the USB device. Some motherboards do not fully support USB suspend, and it is better to turn this on if you have problems when the computer sleeps. |
-| Legacy RS232 DOF Fallback | Keeps a legacy serial port active for DirectOutput installs that have not been updated for the PinOne Ultra's USB HID DOF protocol. Turn this off once your DOF install is updated, which avoids a small amount of extra serial polling. |
+| Legacy RS232 DOF Fallback | Keeps a legacy serial port active for DirectOutput installs that have not been updated for the PinOne Ultra's USB HID DOF protocol. This is no longer needed with DOF version 3.2.9763 or newer, so turn it off once you have installed the [latest DOF](../../DOF/installing.md), which avoids a small amount of extra serial polling. |
 | Enable Bluetooth | Turns on Bluetooth LE so the PinOne can connect to a phone, tablet, PC or VR headset. |
 | Enable Debug | Makes the PinOne send debug messages that are shown in the config tool's Debug Messages panel. This should never be left on during gameplay. |
 

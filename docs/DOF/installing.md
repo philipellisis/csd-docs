@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Installing DOF
 
+:::tip Looking for a simpler install?
+If you just want feedback working on your PinOne, [SuperDOF](../SuperDOF/) is a great and simple alternative. It replaces both DOF and DOFLinx, and gets everything running with one exe and a single setup command. SuperDOF is currently in beta and has some limitations, so check the [SuperDOF page](../SuperDOF/) to see if it fits your setup.
+:::
+
 In order to get the LATEST version of DOF, I highly recommend to install from here and not from anywhere else you might find installers on the internet. These are the latest builds of DOF that include important security updates as well as bug fixes and device compatibility that are not available from any other sources that I am aware of at this time.
 
 You can install DOF using the installers found here. Make sure you select the correct version based on the install of VPX on your PC (64 or 32 bit)

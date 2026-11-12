@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Installing DOFLinx
 
+:::tip Looking for a simpler install?
+If you just want feedback working on your PinOne, [SuperDOF](../SuperDOF/) is a great and simple alternative. It replaces both DOF and DOFLinx, and gets everything running with one exe and a single setup command. SuperDOF is currently in beta and has some limitations, so check the [SuperDOF page](../SuperDOF/) to see if it fits your setup.
+:::
+
 ### Prerequisites
 Before installing DOFLinx, you should already have DOF installed. You can find out more about installing DOF [here](../DOF/)
 

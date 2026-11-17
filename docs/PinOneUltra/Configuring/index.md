@@ -6,6 +6,10 @@ sidebar_position: 4
 
 ### Download the config tool
 
+:::info Which config tool do I need?
+Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../../PinOne/Configuring/index.md) instead.
+:::
+
 [![Get the config tool](./img/button.svg)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe)
 
 On another platform? Download the [macOS (Intel)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-x64.dmg), [macOS (Apple Silicon)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool-arm64.dmg) or [Linux AppImage](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.AppImage) build, or see all files on the [releases page](https://github.com/philipellisis/PinOne/releases/latest).

@@ -10,6 +10,10 @@ Before configuring Steam, make sure the Bluetooth board is installed and paired 
 
 ## Setting Up the Controller in Steam
 
+:::info Which config tool do I need?
+Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra. If you have a PinOne Ultra, get the config tool from the [PinOne Ultra Configuration Tool](../../PinOneUltra/Configuring/index.md) page instead. The download below is only for the original PinOne.
+:::
+
 1. Download the config tool from [here](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.2.1/pinone-config-tool.2.2.1.exe)
 2. Connect to the PinOne board via USB and navigate to the **Controller** screen.
 3. Use the dropdowns to assign the correct buttons to the Xbox controller layout shown on the page.

@@ -8,6 +8,10 @@ To use the PinOne controller with Steam, all you need to do is create a Steam co
 
 ## Create your Steam Game controller configuration using the PinOne Configuration tool Input screen:
 
+:::info Which config tool do I need?
+Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../PinOne/Configuring/index.md) instead.
+:::
+
 1. Download the config tool from [here](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe) (Windows) or the [releases page](https://github.com/philipellisis/PinOne/releases/latest)
 2. Connect to the PinOne board and navigate to the "Controller" screen (see [Controller](./Configuring/steam))
 3. Use the dropdowns to assign the correct button to the XBox controller shown on the page. If you also use Bluetooth, copy the "Bluetooth LE" entry instead of, or as well as, the "USB" entry.

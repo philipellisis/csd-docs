@@ -13,7 +13,7 @@ You can read more about the features [Here](../../PinOne/features)
 The PinOne can be configured using the configuration tool that can be downloaded [Here](../../PinOne/Configuring)
 
 :::info Which config tool do I need?
-Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra. If you have a PinOne Ultra, get the config tool from the [PinOne Ultra Configuration Tool](../../PinOneUltra/Configuring/index.md) page instead. The link above is for the original PinOne.
+Boards shipped after October 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra. If you have a PinOne Ultra, get the config tool from the [PinOne Ultra Configuration Tool](../../PinOneUltra/Configuring/index.md) page instead. The link above is for the original PinOne.
 :::
 
 ## Compatible LEDs

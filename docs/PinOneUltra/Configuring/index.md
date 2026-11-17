@@ -7,7 +7,7 @@ sidebar_position: 4
 ### Download the config tool
 
 :::info Which config tool do I need?
-Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../../PinOne/Configuring/index.md) instead.
+Boards shipped after October 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../../PinOne/Configuring/index.md) instead.
 :::
 
 [![Get the config tool](./img/button.svg)](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe)

@@ -15,7 +15,7 @@ The PinOne Ultra uses a different microcontroller and a different configuration 
 ### Using the config tool
 
 :::info Which config tool do I need?
-Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../../PinOne/Configuring/index.md) instead.
+Boards shipped after October 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra (linked on this page). If you have an original PinOne, use the [original PinOne config tool](../../PinOne/Configuring/index.md) instead.
 :::
 
 The PinOne Ultra needs the newer version of the config tool from [here](https://github.com/philipellisis/PinOne/releases/latest/download/pinone-config-tool.exe) (Windows) or the [releases page](https://github.com/philipellisis/PinOne/releases/latest). The original PinOne can continue to use its own version of the tool. The older config tool for firmware updates on original boards is still available here: [Config Tool](https://github.com/philipellisis/virtual-pinball-board-configurator/releases)

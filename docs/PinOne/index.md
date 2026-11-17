@@ -12,7 +12,7 @@ The [PinOne board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinon
 ### Download the config tool here
 
 :::info Which config tool do I need?
-Boards shipped after November 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra. If you have a PinOne Ultra, get the config tool from the [PinOne Ultra Configuration Tool](../PinOneUltra/Configuring/index.md) page instead. The download below is only for the original PinOne.
+Boards shipped after October 2026 come with the **PinOne Ultra**, and they need to use the config tool built for the Ultra. If you have a PinOne Ultra, get the config tool from the [PinOne Ultra Configuration Tool](../PinOneUltra/Configuring/index.md) page instead. The download below is only for the original PinOne.
 :::
 
 [![Get the config tool](./Configuring/img/button.svg)](https://github.com/philipellisis/arduino-virtual-pinball-board/releases/download/v2.2.1/pinone-config-tool.2.2.1.exe)

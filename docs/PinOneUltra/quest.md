@@ -27,3 +27,7 @@ I: Pause
 ![image](./img/metaquest.png)
 
 Special thanks to DR_HVAC for finding this solution. You can find his post and give him an upvote here: https://www.reddit.com/r/virtualpinball/comments/1l20y2z/success_pinball_fx_vr_with_pinone_mini/
+
+## DOF on the Meta Quest
+
+The Quest can't send DOF to the PinOne over USB. If your pinball app on the Quest can send DOF as ArtNet, the PinOne Ultra can receive it over Wi-Fi. See [Wi-Fi DOF](./Configuring/mainSettings#wi-fi-dof-artnet) for how to set it up.

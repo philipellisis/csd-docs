@@ -10,28 +10,30 @@ sidebar_position: 1
 |---|---|---|
 | Microcontroller | ATmega32U4 (5V) | ESP32-S3 (3.3V), dual core |
 | Direct outputs | 31 on the main board | 31 direct PWM outputs on the main board |
-| Total outputs | 63 | 63 (15 direct + 48 on three PCA9685 expansion boards) |
+| Total outputs | 63 | 63 (31 on the board + 32 on two optional PCA9685 expansion boards) |
 | PWM or on/off | Fixed by output number | Each output can be set to PWM (dimmable) or on/off only |
-| Bluetooth | Separate Bluetooth module | Native Bluetooth LE built into the board |
+| Bluetooth | Separate Bluetooth module | Native Bluetooth LE built into the board, with an optional Xbox controller mode |
+| Wi-Fi | No | DOF over Wi-Fi (ArtNet), for hosts such as the Meta Quest |
 | USB | USB serial | Native USB. The config tool talks over a HID channel instead of a COM port |
 | Accelerometer | MPU6050 | QMI8658, orientation in 5 degree steps, optional velocity output |
 | Plunger ADC | 10-bit | 12-bit, calibration values are in millivolts (0-3300) |
 | IR transmitter | Bit-banged | Hardware (RMT) based, NEC, Samsung and Sony SIRC |
 | Input profiles | No | Up to 4 keyboard mapping profiles |
 | Button lock | No | Yes |
-| Firmware | Normal and X-Input builds | One firmware, updated from the config tool |
+| Firmware | Normal and X-Input builds | One firmware, updated from the config tool. XInput is a setting |
 
 ## Core Hardware Features
 
 - Fully DOF and DOFLinx compatible board
 - 100% compatible in Steam, which means no controller emulation needed to make it work, including the plunger
-- 15 direct PWM outputs built into the board, each of which can be used as a dimmable PWM output or a simple on/off output
-- Up to three expansion boards (PCA9685) can be attached for an additional 48 outputs, for a total of 63 outputs
+- 31 PWM outputs built into the board (15 direct outputs plus 16 from the on-board PCA9685 chip, normally used for the button lights), each of which can be used as a dimmable PWM output or a simple on/off output
+- Up to two expansion boards (PCA9685) can be attached for an additional 32 outputs, for a total of 63 outputs
 - 24 physical inputs for buttons and other devices, plus 8 shifted buttons
 - Separate analog input for a potentiometer based plunger, read at 12 bit resolution
 - Accelerometer for excellent nudge support, with optional velocity based nudge output
 - Native Bluetooth LE: connect to a phone, tablet, PC or VR headset as an Xbox style gamepad and keyboard, and receive DOF output over Bluetooth
 - Super low latency button encoder. Inputs, plunger and accelerometer are read on a dedicated core, so slow output work (I2C, IR) never delays a button press
+- Wi-Fi: receive DOF output over Wi-Fi as ArtNet, for hosts without USB DOF such as the Meta Quest
 - IR transmitter support, so the board can turn your TV on
 
 ## Software Enabled Features
@@ -57,3 +59,7 @@ sidebar_position: 1
 - Button #9 (normally the fire button) can be programmed as a "shift" button that will allow buttons 5-12 to actually trigger buttons 25-32
 - Solenoid sharing feature allows a good solenoid experience even in very limited cabinet sizes as the software will route solenoid trigger events across all available solenoids
 - The config tool warns you when the same button is assigned to more than one feature
+- **Xbox controller modes**: connect over Bluetooth as a stock Xbox Series X controller, or over USB as an Xbox 360 (XInput) controller, for games that only accept an Xbox controller. See [Controller](./Configuring/steam#xbox-controller-settings)
+- **Rumble outputs**: in the Xbox controller modes, the game's rumble can drive any output, such as a shaker or a solenoid. See [Rumble Outputs](./Configuring/steam#rumble-outputs)
+- **Axis assignment**: choose which gamepad axis the nudge, plunger and velocity are sent on, for USB and for Bluetooth/XInput. See [Gamepad Axes](./Configuring/inputs#gamepad-axes)
+- **Wi-Fi DOF**: live Wi-Fi and ArtNet status, and a ready to paste DOF `Cabinet.xml` entry. See [Wi-Fi DOF](./Configuring/mainSettings#wi-fi-dof-artnet)

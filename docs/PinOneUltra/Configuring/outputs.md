@@ -6,16 +6,16 @@ sidebar_position: 2
 
 ![image](./img/Outputs.png)
 
-The PinOne Ultra has 63 outputs. They are split across four tabs in the outputs page:
+The PinOne Ultra has 31 outputs built into the board, and up to two expansion boards can be added for a total of 63 outputs. They are split across four tabs in the outputs page:
 
 | Tab | Outputs | Hardware |
 |---|---|---|
-| Main Outputs | 1-15 | The 15 direct PWM outputs on the PinOne Ultra board |
-| Button Outputs | 16-31 | First PCA9685 board (I2C address 0x40), normally the button light board |
-| Expansion Board #1 | 32-47 | Second PCA9685 board (I2C address 0x41) |
-| Expansion Board #2 | 48-63 | Third PCA9685 board (I2C address 0x42) |
+| Main Outputs | 1-15 | Built in: 15 direct PWM outputs |
+| Button Outputs | 16-31 | Built in: 16 PWM outputs from the PinOne Ultra's on-board PCA9685 chip (I2C address 0x40), normally used for the button lights |
+| Expansion Board #1 | 32-47 | Optional PCA9685 expansion board (I2C address 0x41) |
+| Expansion Board #2 | 48-63 | Optional PCA9685 expansion board (I2C address 0x42) |
 
-The button, expansion #1 and expansion #2 tabs show whether their board was detected when the PinOne started, so you can tell right away if a board is not wired correctly.
+The Button Outputs tab shows whether the on-board chip was detected when the PinOne started. The two expansion board tabs show whether each expansion board was detected, so you can tell right away if one is not wired correctly. If you haven't added any expansion boards, those two tabs show "Not Connected", which is expected.
 
 ## Master slider
 
@@ -61,9 +61,11 @@ Set this depending on the nature of the device. Below is a description of the di
  - **Light Show High** Same as the above, only in this mode the lights will always be at 100% intensity, so pressing a button won't affect how bright it is.
  - **Shared** These outputs are also affected by night mode, but they will also share events. This is typically used with solenoids so if you have an event telling a solenoid to trigger, but that output is already enabled, it will look to other shared outputs to trigger instead.
 
-## Controlling outputs over Bluetooth
+## Controlling outputs over Bluetooth, Wi-Fi and rumble
 
 DOF output commands can also arrive over Bluetooth LE when the PinOne Ultra is connected to a device over Bluetooth. You can test this from the [settings page](./mainSettings#test-bluetooth-outputs).
+
+Outputs can also be driven by DOF over Wi-Fi (ArtNet), see [Wi-Fi DOF](./mainSettings#wi-fi-dof-artnet), and by a game's controller rumble in the Xbox and XInput controller modes, see [Rumble Outputs](./steam#rumble-outputs).
 
 ## How to set button colors
 

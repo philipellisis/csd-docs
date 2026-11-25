@@ -25,6 +25,24 @@ Controls how a button press is sent to the computer:
 - **Keyboard only**: buttons that have a keyboard key assigned in the active profile send only the keyboard key. Buttons with no key assigned fall back to sending the gamepad button.
 - **Keyboard + Gamepad**: every press sends both the keyboard key and the gamepad button at the same time.
 
+## Gamepad Axes
+
+![image](./img/inputs-gamepad-axes.png)
+
+These dropdowns choose which axis of the USB gamepad each analog signal is sent on. The choices are X, Y, Z, Rx and Ry.
+
+| Setting | Default | Description |
+|---|---|---|
+| Nudge Left/Right | X | The accelerometer's left/right nudge. |
+| Nudge Up/Down | Y | The accelerometer's up/down nudge. |
+| Plunger | Z | The plunger position. |
+| Velocity Left/Right | Rx | The left/right nudge velocity. Only used when **Enable Velocity Output** is on, on the [Accelerometer page](./accelerometer#velocity-output). |
+| Velocity Up/Down | Ry | The up/down nudge velocity. Only used when velocity output is on. |
+
+The defaults work for VPX and most other games, so only change these if a game expects a signal on a different axis. Each signal needs its own axis: if two of them are set to the same axis, the tool shows an error, because only one of them would work. The velocity axes only count while velocity output is on.
+
+If you change these, the Steam entry on the [Controller page](./steam#saving-to-steam) follows them automatically. The axes used over Bluetooth and in USB XInput mode are Xbox stick axes, and are set on the [Controller page](./steam#stick-axes).
+
 ## Per input settings
 
 ### Button Labels

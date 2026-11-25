@@ -6,7 +6,7 @@ sidebar_position: 1.1
 
 ## Introduction
 
-The PinOne Ultra is the next generation of the [PinOne board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinone-control-board). It is an open source virtual pinball controller built around the [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) microcontroller instead of the ATmega32U4 used by the original PinOne. It keeps everything the original PinOne offered (DOF support, Steam compatibility, plunger, accelerometer nudge, light show and more) and adds native Bluetooth LE, 15 direct PWM outputs, velocity based nudge, input profiles, a button lock and a refreshed configuration tool.
+The PinOne Ultra is the next generation of the [PinOne board](https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinone-control-board). It is an open source virtual pinball controller built around the [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) microcontroller instead of the ATmega32U4 used by the original PinOne. It keeps everything the original PinOne offered (DOF support, Steam compatibility, plunger, accelerometer nudge, light show and more) and adds native Bluetooth LE, 31 built-in PWM outputs, velocity based nudge, input profiles, a button lock and a refreshed configuration tool.
 
 More details about the features, and a comparison with the original PinOne, can be found on the [features](./features) page.
 

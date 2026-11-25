@@ -24,7 +24,7 @@ The header at the top of the window is always visible and has the following cont
 
 - **COM Port**: leave this on `Auto` and the tool will find the PinOne for you. You only need to pick a port manually if you have more than one PinOne connected, or when updating firmware.
 - **Connect / Disconnect**: connect to or disconnect from the board.
-- **Save Config**: writes the current configuration to the board. Nothing you change in the tool is permanent until you click this button.
+- **Save Config**: writes the current configuration to the board. Nothing you change in the tool is permanent until you click this button. The button shows `Saving...` until the board confirms, and then a "Configuration Saved" message appears. If the board does not accept the configuration, a "Save Failed" message appears and nothing is changed on the board. This usually means other software is talking to the PinOne at the same time: close DOF, pinball frontends and tables, then click `Save Config` again.
 - **Debug Messages**: opens a panel that shows debug messages from the board. This is useful when troubleshooting, but see the note about the debug setting on the [settings page](./mainSettings#other-settings).
 - **Version information**: shows the firmware version of the PinOne and the version of the config tool.
 - **Theme toggle**: switches between the light and dark themes.
@@ -41,11 +41,11 @@ Once connected, the side menu lists all the pages available to test and configur
 |---|---|
 | Home | Backup, restore and presets |
 | [Accelerometer](./accelerometer) | Nudge calibration, tilt, orientation and velocity output |
-| [Inputs](./inputs) | Button labels, mapping, keyboard keys, debounce, input profiles and button lock |
+| [Inputs](./inputs) | Button labels, mapping, keyboard keys, debounce, gamepad axes, input profiles and button lock |
 | [Outputs](./outputs) | Test and configure all 63 outputs |
 | [Plunger](./plunger) | Calibrate and tune the plunger |
-| [Settings](./mainSettings) | Button triggers, night mode, light show and global options |
-| [Controller](./steam) | Xbox style controller layout for Steam, and Bluetooth setup |
+| [Settings](./mainSettings) | Button triggers, night mode, light show, Wi-Fi DOF and global options |
+| [Controller](./steam) | Xbox controller layout for Steam, Bluetooth setup, Xbox and XInput controller modes, and rumble |
 | [IR Config](./ir-settings) | Turn a TV on with the IR transmitter |
 
 ### Configuration Management
@@ -75,7 +75,7 @@ Before you connect to the board, the home page shows four firmware options. This
 3. **Enter Bootloader Mode**: puts the board into bootloader mode and shows you the bootloader COM port once it is ready. Use this when you want to see which port the board will use before uploading.
 4. **Create Firmware Update Files**: creates the firmware files and a script that you can run manually from the command line. This is useful for troubleshooting or for advanced users.
 
-There is only one firmware for the PinOne Ultra. There is no separate X-Input firmware, because the PinOne Ultra works in Steam and VPX with no emulation and the config tool stays available at all times.
+There is only one firmware for the PinOne Ultra. There is no separate X-Input firmware: the PinOne Ultra works in Steam and VPX with no emulation, and for games that need an Xbox controller, the [USB XInput Controller Mode](./steam#usb-xinput-controller-mode) is a setting on the Controller page. The config tool keeps working in either mode.
 
 See [Issues updating firmware](../Troubleshooting/firmware) if you have trouble.
 

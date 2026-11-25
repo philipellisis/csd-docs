@@ -28,7 +28,7 @@ Install **esp32 by Espressif** version **3.3.6** from the Arduino IDE Boards Man
 
 Install these using the Arduino Library Manager:
 
-- Adafruit PWM Servo Driver Library (for the PCA9685 expansion boards)
+- Adafruit PWM Servo Driver Library (for the on-board PCA9685 chip and the PCA9685 expansion boards)
 - Adafruit BusIO
 - NimBLE-Arduino version 2.3.7 (for Bluetooth LE)
 
@@ -51,9 +51,10 @@ arduino-cli compile --fqbn esp32:esp32:esp32s3usbotg -u -p COM5 .
 |---|---|---|
 | 74HC165 shift registers x3 | GPIO 4 (data), 5 (clock), 6 (latch) | 24 button inputs |
 | Plunger | GPIO 7 | Analog, 12-bit, read in millivolts |
-| I2C | GPIO 8 (SDA), GPIO 9 (SCL) | PCA9685 boards and accelerometer |
+| I2C | GPIO 8 (SDA), GPIO 9 (SCL) | PCA9685 chip, expansion boards and accelerometer |
 | Direct outputs 1-15 | GPIO 40, 38, 39, 14, 15, 48, 13, 18, 12, 11, 47, 21, 45, 42, 10 | 1 kHz PWM |
-| PCA9685 boards | I2C 0x40, 0x41, 0x42 | Outputs 16-31, 32-47 and 48-63 |
+| On-board PCA9685 | I2C 0x40 | Outputs 16-31, built into the board |
+| PCA9685 expansion boards | I2C 0x41, 0x42 | Outputs 32-47 and 48-63, optional |
 | QMI8658 accelerometer | I2C 0x6B or 0x6A | Detected at boot |
 | USB | GPIO 19 / 20 | Native USB |
 

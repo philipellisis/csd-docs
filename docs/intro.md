@@ -4,17 +4,16 @@ sidebar_position: 1
 
 # Start Here
 
+:::tip See how everything connects
+These interactive diagrams show every product connected to each board, with exactly which connector each cable plugs into. Each product links to its page in the store.
+
+- **[PinOne Main visual connection diagram](./pinone-main-connection-diagram.md)**
+- **[PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md)**
+:::
 
 ## Product Overview
 
 Most products consist of the "do it yourself" solutions, through individual boards that you can put together to form an entire kit, or the fully assembled and ready to plug into your pinball machine variety. 
-
-### See how it all connects
-
-Want to see how everything plugs together? These interactive diagrams show every product connected to each board, with exactly which connector each cable plugs into. Each product links to its page in the store.
-
-- [PinOne Main visual connection diagram](./pinone-main-connection-diagram.md)
-- [PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md)
 
 ## Kits
 

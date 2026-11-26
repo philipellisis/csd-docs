@@ -40,11 +40,11 @@ export const nodes = [
   // ---------------- buttons + plunger, top ----------------
   {
     id: 'rgbFlip',
-    title: 'RGB Leaf Buttons',
+    title: 'RGB True Leaf Buttons',
     subtitle: 'Flippers + magna saves',
     badge: '×4',
-    img: `${IMG}rgb-button.png`,
-    url: product('rgb-leaf-button'),
+    img: `${IMG}rgb-true-leaf-button.png`,
+    url: product('rgb-true-leaf-button'),
     x: 1042,
     y: 520,
     w: 220,
@@ -66,10 +66,10 @@ export const nodes = [
   },
   {
     id: 'fire',
-    title: 'RGB Leaf Button',
+    title: 'RGB True Leaf Button',
     subtitle: 'Fire / launch button',
-    img: `${IMG}rgb-button.png`,
-    url: product('rgb-leaf-button'),
+    img: `${IMG}rgb-true-leaf-button.png`,
+    url: product('rgb-true-leaf-button'),
     x: 1498,
     y: 520,
     w: 220,

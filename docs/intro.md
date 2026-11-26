@@ -10,6 +10,7 @@ These interactive diagrams show every product connected to each board, with exac
 - **[PinOne Main visual connection diagram](./pinone-main-connection-diagram.md)**
 - **[PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md)**
 - **[Addressable LED visual connection diagram](./addressable-led-connection-diagram.md)**
+- **[SSF visual connection diagram](./ssf-connection-diagram.md)**
 :::
 
 ## Product Overview

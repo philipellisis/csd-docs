@@ -92,6 +92,14 @@ function edgeGeometry(a, sideA, b, sideB, via) {
 }
 
 function NodeIcon({icon}) {
+  if (icon === 'speaker') {
+    return (
+      <svg viewBox="0 0 64 64" className={styles.pcIcon} aria-hidden="true">
+        <path d="M8 24h12l16-13v42L20 40H8z" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+        <path d="M44 22c4 6 4 14 0 20M50 16c7 9 7 23 0 32" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    );
+  }
   if (icon === 'device') {
     // generic 12V load: a plug with a lightning bolt
     return (
@@ -480,10 +488,12 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
             {edgeTypes[t].label}
           </span>
         ))}
+        {edges.some((e) => e.dashed) && (
         <span className={styles.legendItem}>
           <span className={clsx(styles.swatch, styles.swatchDashed)} />
           Alternative hookup
         </span>
+        )}
       </div>
 
       <div

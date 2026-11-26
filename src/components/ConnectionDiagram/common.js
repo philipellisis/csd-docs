@@ -16,6 +16,8 @@ export const product = (slug) => `${STORE}${slug}`;
 export const edgeTypes = {
   power: {label: '12V DC power', color: '#e5484d'},
   power5: {label: '5V DC power', color: '#e5484d'},
+  power24: {label: '24V DC power', color: '#e5484d'},
+  speaker: {label: 'Speaker wire', color: '#ad5700'},
   aled: {label: 'Addressable LED lead (5V · data · GND)', color: '#d6409f'},
   output: {label: 'High-power output', color: '#f76b15'},
   signal: {label: 'Low-power signal / plunger', color: '#30a46c'},

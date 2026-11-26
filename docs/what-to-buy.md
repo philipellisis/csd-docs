@@ -10,6 +10,7 @@ Not sure how the parts below plug together? These interactive diagrams show ever
 - **[PinOne Main visual connection diagram](./pinone-main-connection-diagram.md)**
 - **[PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md)**
 - **[Addressable LED visual connection diagram](./addressable-led-connection-diagram.md)**
+- **[SSF visual connection diagram](./ssf-connection-diagram.md)**
 :::
 
 Below are all the parts needed to build all the internals of a pinball cabinet along with the individual "cabinet components" that will be needed to add specific features

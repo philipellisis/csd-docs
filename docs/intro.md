@@ -9,6 +9,10 @@ sidebar_position: 1
 
 Most products consist of the "do it yourself" solutions, through individual boards that you can put together to form an entire kit, or the fully assembled and ready to plug into your pinball machine variety. 
 
+### See how it all connects
+
+Want to see how everything plugs together? The [PinOne Main visual connection diagram](./pinone-main-connection-diagram.md) is an interactive diagram of every product connected to the PinOne Main board. It shows exactly which connector each cable plugs into, and each product links to its page in the store.
+
 ## Kits
 
 ### Starter Kits

@@ -27,7 +27,7 @@ Almost every part comes with the wires it needs. The exception is the wire from 
 The expansion board cable, the ribbon cables and the strobes can all be plugged in backwards. A reversed ribbon cable won't damage anything, but the buttons or lights won't work. **Reversed strobes can damage the strobes or the expansion board.** Hover over each wire in the diagram for details.
 :::
 
-You don't need every part shown. Start with the main board and power supply, then add the parts you want. See [DIY Cabinet Options](./what-to-buy.md) for help choosing parts, and the [Builders Kit guides](./BuildersKit/intro.md) for close-up photos of each connection.
+You don't need every part shown. Start with the main board and power supply, then add the parts you want. See [DIY Cabinet Options](./what-to-buy.md) for help choosing parts, and the [Builders Kit guides](./BuildersKit/intro.md) for close-up photos of each connection. Using the smaller board? See the [PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md).
 
 ## Every connection
 

@@ -11,7 +11,10 @@ Most products consist of the "do it yourself" solutions, through individual boar
 
 ### See how it all connects
 
-Want to see how everything plugs together? The [PinOne Main visual connection diagram](./pinone-main-connection-diagram.md) is an interactive diagram of every product connected to the PinOne Main board. It shows exactly which connector each cable plugs into, and each product links to its page in the store.
+Want to see how everything plugs together? These interactive diagrams show every product connected to each board, with exactly which connector each cable plugs into. Each product links to its page in the store.
+
+- [PinOne Main visual connection diagram](./pinone-main-connection-diagram.md)
+- [PinOne Mini visual connection diagram](./pinone-mini-connection-diagram.md)
 
 ## Kits
 

@@ -1,40 +1,10 @@
 /*
- * PinOne Main connection diagram data.
- *
- * Product photos live in /static/img/pinone-main-diagram and were taken from
- * each product's page on clevelandsoftwaredesign.com.
- *
- * Coordinates are world pixels. Ports: side = top|right|bottom|left,
- * at = 0..1 position along that side, w = chip width for left/right ports.
+ * PinOne Main connection diagram data. See common.js for the data format.
  */
 
-const STORE = 'https://www.clevelandsoftwaredesign.com/pinball-parts/p/';
-const IMG = '/img/pinone-main-diagram/';
+import {IMG, edgeTypes, product, wire3, wire4} from './common';
 
-export const edgeTypes = {
-  power: {label: '12V DC power', color: '#e5484d'},
-  output: {label: 'High-power output', color: '#f76b15'},
-  signal: {label: 'Low-power signal / plunger', color: '#30a46c'},
-  i2c: {label: '4-pin expansion cable', color: '#8e4ec6'},
-  ribbon: {label: 'Ribbon cable', color: '#3e63dd'},
-  button: {label: 'Button / LED leads', color: '#0090a8'},
-  usb: {label: 'USB', color: '#80838d'},
-};
-
-const wire3 = {
-  text: '3 Terminal Connector Wire',
-  url: `${STORE}terminal-connector-wire`,
-  img: `${IMG}wire-3-terminal.png`,
-  separate: true,
-};
-const wire4 = {
-  text: '4 Terminal Connector Wire',
-  url: `${STORE}terminal-connector-wire`,
-  img: `${IMG}wire-4-terminal.png`,
-  separate: true,
-};
-
-const product = (slug) => `${STORE}${slug}`;
+export {edgeTypes};
 
 export const nodes = [
   // ---------------- hub ----------------
@@ -56,8 +26,9 @@ export const nodes = [
       {id: 'out35', side: 'right', at: 0.2, w: 200, label: 'Outputs 3–5 (+ 3 4 5)'},
       {id: 'shaker', side: 'right', at: 0.42, w: 200, label: 'Beacon / Shaker'},
       {id: 'power', side: 'right', at: 0.55, w: 200, label: 'Main Power (12–24V)'},
-      {id: 'signal', side: 'right', at: 0.72, w: 200, label: 'Signal Out (USB GND · Knock)'},
-      {id: 'exp', side: 'right', at: 0.86, w: 200, label: 'To Expansion Boards (J3)'},
+      {id: 'signal', side: 'right', at: 0.7, w: 200, label: 'Signal Out (USB GND · Knock · 14 · 15)'},
+      {id: 'exp', side: 'right', at: 0.84, w: 200, label: 'To Expansion Boards (J3, row 1)'},
+      {id: 'exp2', side: 'right', at: 0.95, w: 200, label: 'To Expansion Boards (J3, row 2)'},
       {id: 'j2', side: 'bottom', at: 0.3, label: 'To Button Board Buttons (J2)'},
       {id: 'j5', side: 'bottom', at: 0.7, label: 'To Button Board Outputs (J5)'},
       {id: 'usb', side: 'left', at: 0.2, w: 180, label: 'USB (PinOne board)'},
@@ -131,7 +102,7 @@ export const nodes = [
     subtitle: 'Common terminal positive',
     img: `${IMG}life-extender-2.png`,
     url: product('style-01-j6jmp'),
-    x: 2120,
+    x: 2300,
     y: 540,
     w: 220,
     h: 200,
@@ -147,7 +118,7 @@ export const nodes = [
     badge: '×2',
     img: `${IMG}solenoid.png`,
     url: product('high-quality-solenoid'),
-    x: 2680,
+    x: 2860,
     y: 540,
     w: 220,
     h: 200,
@@ -159,7 +130,7 @@ export const nodes = [
     subtitle: 'Common terminal positive',
     img: `${IMG}life-extender-3.png`,
     url: product('style-01-j6jmp'),
-    x: 2120,
+    x: 2300,
     y: 800,
     w: 220,
     h: 200,
@@ -175,20 +146,20 @@ export const nodes = [
     badge: '×3',
     img: `${IMG}solenoid.png`,
     url: product('high-quality-solenoid'),
-    x: 2680,
+    x: 2860,
     y: 800,
     w: 220,
     h: 200,
     ports: [{id: 'coil', side: 'left', w: 110, label: 'Coil terminals'}],
   },
 
-  // ---------------- right column ----------------
+  // ---------------- right column (A: x 2300, B: x 2900, C: x 3400) ----------------
   {
     id: 'shaker',
     title: 'Ultimate Shaker Motor',
     img: `${IMG}shaker-motor.png`,
     url: product('ultimate-pinball-shaker-motor'),
-    x: 2120,
+    x: 2300,
     y: 1060,
     w: 220,
     h: 190,
@@ -200,13 +171,12 @@ export const nodes = [
     subtitle: 'Comes with AC cord',
     img: `${IMG}power-supply.png`,
     url: product('12v-10a-power-supply-with-cord'),
-    x: 2120,
+    x: 2900,
     y: 1290,
     w: 220,
     h: 200,
     ports: [
       {id: 'dc1', side: 'left', w: 140, label: '+V / −V terminals'},
-      {id: 'dc2', side: 'right', w: 140, label: '+V / −V terminals'},
       {id: 'dc3', side: 'bottom', label: '+V / −V terminals'},
     ],
   },
@@ -216,23 +186,51 @@ export const nodes = [
     subtitle: 'Knocker coil included',
     img: `${IMG}knocker-kit.png`,
     url: product('12v-to-24v-knocker-circuit-conversion-kit'),
-    x: 2120,
-    y: 1590,
+    x: 2300,
+    y: 1540,
     w: 220,
     h: 230,
     ports: [
-      {id: 'pwr', side: 'top', label: '12V input'},
       {id: 'sig', side: 'left', at: 0.35, w: 140, label: 'Signal + / −'},
+      {id: 'pwr', side: 'right', at: 0.35, w: 110, label: '12V input'},
     ],
+  },
+  {
+    id: 'twoout',
+    title: 'Simple Two Output Board',
+    subtitle: 'Adds 2 high-power outputs',
+    img: `${IMG}two-output-board.png`,
+    url: product('simple-two-output-board'),
+    x: 2300,
+    y: 1860,
+    w: 220,
+    h: 210,
+    ports: [
+      {id: 'sig', side: 'left', at: 0.3, w: 150, label: 'Signal input (GND · 1 · 2)'},
+      {id: 'pwr', side: 'right', at: 0.25, w: 120, label: '5–30V input (+ −)'},
+      {id: 'out', side: 'right', at: 0.72, w: 145, label: 'Outputs 1 & 2 (+ −)'},
+    ],
+  },
+  {
+    id: 'dev2',
+    icon: 'device',
+    title: '12V devices',
+    subtitle: 'Up to 2, up to 10A each',
+    badge: '×2',
+    x: 3400,
+    y: 1900,
+    w: 220,
+    h: 180,
+    ports: [{id: 'in', side: 'left', w: 110, label: 'Device leads'}],
   },
   {
     id: 'exp',
     title: 'PinOne Expansion Board',
-    subtitle: '16 output (low power) version',
+    subtitle: 'Low power version · runs the light bar',
     img: `${IMG}expansion-board.png`,
     url: product('pinone-expansion-board'),
-    x: 2120,
-    y: 1920,
+    x: 2300,
+    y: 2180,
     w: 220,
     h: 210,
     ports: [
@@ -246,8 +244,8 @@ export const nodes = [
     title: 'RGB Light Bar',
     img: `${IMG}light-bar.png`,
     url: product('rgb-12v-virtual-pinball-light-bar'),
-    x: 2120,
-    y: 2300,
+    x: 2300,
+    y: 2540,
     w: 220,
     h: 190,
     ports: [
@@ -262,11 +260,39 @@ export const nodes = [
     badge: '×2',
     img: `${IMG}strobe.png`,
     url: product('rgb-12v-virtual-pinball-light-bar-sr8y4'),
-    x: 2640,
-    y: 2300,
+    x: 3400,
+    y: 2540,
     w: 220,
     h: 190,
     ports: [{id: 'in', side: 'left', w: 110, label: 'Strobe lead'}],
+  },
+  {
+    id: 'hp',
+    title: 'PinOne High Power Expansion Board',
+    subtitle: '16 extra high-power outputs',
+    img: `${IMG}high-power-expansion-board.png`,
+    url: product('pinone-expansion-board'),
+    x: 2300,
+    y: 2870,
+    w: 220,
+    h: 230,
+    ports: [
+      {id: 'i2c', side: 'left', at: 0.4, w: 150, label: 'JP5 (GND +5V SDA SCL)'},
+      {id: 'pwr', side: 'right', at: 0.25, w: 130, label: '12V power input'},
+      {id: 'out', side: 'right', at: 0.72, w: 150, label: 'Outputs 1–16 (+ / out)'},
+    ],
+  },
+  {
+    id: 'devHP',
+    icon: 'device',
+    title: '12V toys',
+    subtitle: 'Gear motor, beacon, fan, and more',
+    badge: '×16',
+    x: 3400,
+    y: 2930,
+    w: 220,
+    h: 180,
+    ports: [{id: 'in', side: 'left', w: 110, label: 'Device leads'}],
   },
 
   // ---------------- left column ----------------
@@ -360,7 +386,7 @@ export const nodes = [
     subtitle: 'Part of the Button Hookup Kit',
     img: `${IMG}button-hookup-kit.png`,
     url: product('virtual-pinball-button-hookup-kit'),
-    x: 1840,
+    x: 1720,
     y: 2300,
     w: 220,
     h: 190,
@@ -376,7 +402,7 @@ export const nodes = [
     badge: '×2',
     img: `${IMG}rgb-button.png`,
     url: product('rgb-leaf-button'),
-    x: 1840,
+    x: 1720,
     y: 2640,
     w: 220,
     h: 200,
@@ -427,9 +453,23 @@ export const edges = [
     note: 'The knocker board takes 12V from the power supply and boosts it to 24V for the knocker coil.',
   },
   {
+    id: 'psu-twoout',
+    type: 'power',
+    from: ['psu', 'dc3'],
+    to: ['twoout', 'pwr'],
+    note: 'Run 12V from the power supply to the + / − input on the two output board (it accepts 5–30V).',
+  },
+  {
+    id: 'psu-hp',
+    type: 'power',
+    from: ['psu', 'dc3'],
+    to: ['hp', 'pwr'],
+    note: 'The high power expansion board is powered from the 12V supply. Each bank of outputs on the board has its own 10A fuse.',
+  },
+  {
     id: 'psu-exp',
     type: 'power',
-    from: ['psu', 'dc2'],
+    from: ['psu', 'dc3'],
     to: ['exp', 'pwr'],
     note: 'The expansion board is powered just like the main board: plug 12V into its Main Power (J9) terminal.',
   },
@@ -514,6 +554,35 @@ export const edges = [
     from: ['main', 'signal'],
     to: ['knocker', 'sig'],
     note: 'Connect USB GND to Signal − and Knock to Signal + on the knocker board.',
+  },
+  {
+    id: 'main-twoout',
+    type: 'signal',
+    from: ['main', 'signal'],
+    to: ['twoout', 'sig'],
+    note: 'Uses the two spare pins on the same Signal Out terminal as the knocker: USB GND to GND, 14 to input 1 and 15 to input 2. The inputs need only a few mA, so the low-power signal outputs can drive them.',
+  },
+  {
+    id: 'twoout-dev',
+    type: 'output',
+    from: ['twoout', 'out'],
+    to: ['dev2', 'in'],
+    note: 'Connect each device across + and − of Output 1 or Output 2. Each output can switch up to 10A continuous.',
+  },
+  {
+    id: 'main-hp',
+    type: 'i2c',
+    from: ['main', 'exp2'],
+    to: ['hp', 'i2c'],
+    label: '4-pin cable',
+    note: 'Hooks up the same way as the low power expansion board: black wire to GND on both boards. If you have both expansion boards, set this one to the second address so its outputs show on the "Expansion Board 2" tab in the config tool.',
+  },
+  {
+    id: 'hp-dev',
+    type: 'output',
+    from: ['hp', 'out'],
+    to: ['devHP', 'in'],
+    note: 'Use the 16 high-power outputs for 12V gear motors, beacons, fans and other toys. Connect each device between + and its numbered output.',
   },
   {
     id: 'main-exp',

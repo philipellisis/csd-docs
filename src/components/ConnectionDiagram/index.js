@@ -48,20 +48,59 @@ function bezierAt(p0, p1, p2, p3, t) {
   };
 }
 
-function edgeGeometry(a, sideA, b, sideB) {
-  const dist = Math.hypot(b.x - a.x, b.y - a.y);
-  const k = clamp(dist * 0.45, 50, 240);
+function edgeGeometry(a, sideA, b, sideB, via) {
   const [ax, ay] = DIRS[sideA];
   const [bx, by] = DIRS[sideB];
-  const c1 = {x: a.x + ax * k, y: a.y + ay * k};
-  const c2 = {x: b.x + bx * k, y: b.y + by * k};
+  if (!via || via.length === 0) {
+    const dist = Math.hypot(b.x - a.x, b.y - a.y);
+    const k = clamp(dist * 0.45, 50, 240);
+    const c1 = {x: a.x + ax * k, y: a.y + ay * k};
+    const c2 = {x: b.x + bx * k, y: b.y + by * k};
+    return {
+      d: `M${a.x},${a.y} C${c1.x},${c1.y} ${c2.x},${c2.y} ${b.x},${b.y}`,
+      at: (t) => bezierAt(a, c1, c2, b, t),
+    };
+  }
+  // Routed edge: smooth Catmull-Rom curve through the waypoints, leaving and
+  // entering the ports in their outward direction.
+  const pts = [a, ...via, b];
+  const n = pts.length - 1;
+  const segs = [];
+  for (let i = 0; i < n; i += 1) {
+    const p0 = pts[i];
+    const p1 = pts[i + 1];
+    const len = Math.hypot(p1.x - p0.x, p1.y - p0.y);
+    const k = clamp(len * 0.4, 40, 200);
+    const c1 =
+      i === 0
+        ? {x: p0.x + ax * k, y: p0.y + ay * k}
+        : {x: p0.x + (p1.x - pts[i - 1].x) / 6, y: p0.y + (p1.y - pts[i - 1].y) / 6};
+    const c2 =
+      i === n - 1
+        ? {x: p1.x + bx * k, y: p1.y + by * k}
+        : {x: p1.x - (pts[i + 2].x - p0.x) / 6, y: p1.y - (pts[i + 2].y - p0.y) / 6};
+    segs.push([p0, c1, c2, p1]);
+  }
   return {
-    d: `M${a.x},${a.y} C${c1.x},${c1.y} ${c2.x},${c2.y} ${b.x},${b.y}`,
-    at: (t) => bezierAt(a, c1, c2, b, t),
+    d: `M${a.x},${a.y} ${segs.map(([, c1, c2, p1]) => `C${c1.x},${c1.y} ${c2.x},${c2.y} ${p1.x},${p1.y}`).join(' ')}`,
+    at: (t) => {
+      const f = clamp(t, 0, 0.9999) * segs.length;
+      const s = segs[Math.floor(f)];
+      return bezierAt(s[0], s[1], s[2], s[3], f - Math.floor(f));
+    },
   };
 }
 
-function PcIcon() {
+function NodeIcon({icon}) {
+  if (icon === 'device') {
+    // generic 12V load: a plug with a lightning bolt
+    return (
+      <svg viewBox="0 0 64 64" className={styles.pcIcon} aria-hidden="true">
+        <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" strokeWidth="3" />
+        <path d="M35 10 L20 36 H31 L28 54 L44 27 H33 Z" fill="currentColor" />
+      </svg>
+    );
+  }
   return (
     <svg viewBox="0 0 64 48" className={styles.pcIcon} aria-hidden="true">
       <rect x="4" y="2" width="56" height="34" rx="3" fill="none" stroke="currentColor" strokeWidth="3" />
@@ -116,7 +155,7 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
         const B = portOf(e.to[0], e.to[1]);
         const a = portAnchor(A.node, A.port);
         const b = portAnchor(B.node, B.port);
-        const g = edgeGeometry(a, A.port.side, b, B.port.side);
+        const g = edgeGeometry(a, A.port.side, b, B.port.side, e.via);
         return {...e, A, B, a, b, d: g.d, mid: g.at(e.labelAt == null ? 0.5 : e.labelAt)};
       }),
     [edges, portOf],
@@ -426,7 +465,10 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
     );
   }, [focus, geoEdges, nodeById, edgeTypes]);
 
-  const usedTypes = useMemo(() => [...new Set(edges.map((e) => e.type))], [edges]);
+  const usedTypes = useMemo(() => {
+    const used = new Set(edges.map((e) => e.type));
+    return Object.keys(edgeTypes).filter((t) => used.has(t));
+  }, [edges, edgeTypes]);
   const gridSize = 24 * view.k;
 
   return (
@@ -513,7 +555,7 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
                     {n.img ? (
                       <img src={withBaseUrl(n.img)} alt={n.title} draggable={false} loading="lazy" />
                     ) : (
-                      <PcIcon />
+                      <NodeIcon icon={n.icon} />
                     )}
                     {n.badge && <span className={styles.badge}>{n.badge}</span>}
                   </div>

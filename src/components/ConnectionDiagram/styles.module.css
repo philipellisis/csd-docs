@@ -542,3 +542,23 @@ a.card:focus-visible {
 :global([data-theme='dark']) .panelNote {
   color: #d3d5da;
 }
+
+/* optional cable (e.g. extension wires): calmer than "sold separately" */
+.cablePillOptional {
+  border-color: #0090a8;
+  background: #e8f7fa;
+  color: #0b3a44 !important;
+}
+
+.cablePillOptional small {
+  color: #00788c;
+}
+
+/* The world layer has no width, so absolutely positioned labels must size to
+   their own content instead of shrinking and overflowing. */
+.edgeLabel,
+.cablePill,
+.port_top,
+.port_bottom {
+  width: max-content;
+}

@@ -442,7 +442,7 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
           {e.cable && (
             <div className={styles.panelCable}>
               Cable: {e.cable.url ? <a href={e.cable.url} target="_blank" rel="noopener noreferrer">{e.cable.text}</a> : e.cable.text}
-              {e.cable.separate ? ' (sold separately)' : ''}
+              {e.cable.separate ? ` (${(e.cable.tag || 'sold separately').toLowerCase()})` : ''}
             </div>
           )}
           {e.note && <div className={styles.panelNote}>{e.note}</div>}
@@ -619,12 +619,12 @@ export default function ConnectionDiagram({nodes, edges, edgeTypes, height}) {
                     onClick={suppressClickAfterDrag}
                     onMouseEnter={() => setHover({kind: 'edge', id: e.id})}
                     onMouseLeave={() => setHover(null)}
-                    className={clsx(styles.cablePill, dim && styles.dimmed)}
+                    className={clsx(styles.cablePill, e.cable.tag && styles.cablePillOptional, dim && styles.dimmed)}
                     style={pos}>
                     {e.cable.img && <img src={withBaseUrl(e.cable.img)} alt="" draggable={false} loading="lazy" />}
                     <span>
                       {e.cable.text}
-                      <small>Sold separately ↗</small>
+                      <small>{e.cable.tag || 'Sold separately'} ↗</small>
                     </span>
                   </a>
                 );
@@ -734,7 +734,7 @@ export function ConnectionTable({nodes, edges, edgeTypes}) {
               {e.cable && e.cable.separate && (
                 <>
                   <br />
-                  <strong>Sold separately</strong>
+                  <strong>{e.cable.tag || 'Sold separately'}</strong>
                 </>
               )}
             </td>

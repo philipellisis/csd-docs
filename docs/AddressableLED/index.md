@@ -4,6 +4,10 @@ sidebar_position: 4
 
 # Addressable LEDs
 
+:::tip See how everything connects
+The [Addressable LED visual connection diagram](../addressable-led-connection-diagram.md) shows which output each strip, panel and speaker ring plugs into on the controller.
+:::
+
 ## Introduction
 
 Addressable LEDs are another component of DOF, but are normally built into a separate board as they are more CPU intensive than the normal on/off DOF events that occur with solenoids and normal lights. Because of this, it makes sense to have a separate, dedicated board that handles the Addressable LED DOF events. 
